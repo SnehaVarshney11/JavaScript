@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Block Level Elements</title>
+</head>
+<body>
+    <!-- Formatted paragraph -->
+    <p>
+        This is the first paragraph in the example about the P tag. There really
+        isn't much to say here.
+      </p>
+      <p align="center">
+        This is the second paragraph. Again, more of the same. This time the
+        paragraph is aligned in the center. This might not be such a good idea as
+        it makes the text hard to read.
+      </p>
+      <p align="right">
+        Here the paragraph is aligned to the right. Right-aligned text is also
+        troublesome to read. The rest of the text of this paragraph is of little
+        importance.
+      </p>
+      <p align="justify">
+        Under HTML 4.0-compliant browsers, you are able to justify text. As you
+        may notice, the way browsers tend to justify text is sometimes imprecise.
+        Furthermore, not all browsers support this attribute value.
+      </p>
+
+      <!-- PreFormatted Text  -->
+      <pre> 
+        This is            an            example of 
+              text with a        lot of
+                                curious
+                                white space. 
+        </pre>  
+        <p>
+        This is             a            example of 
+              text with a         lot of
+                                  curious
+                                  white space. 
+        </p>
+
+        <!-- BlockQuote Tag  -->
+        <blockquote>Browsers generally render blockquote text as indented text. If your
+            quoted text needs to display within a non-quoted paragraph, you should use the
+            HTML q tag. Most browsers surround q text with quotation marks.</blockquote>
+        <q>Browsers generally render blockquote text as indented text. If your quoted 
+            text needs to display within a non-quoted paragraph, you should use the HTML q 
+            tag. Most browsers surround q text with quotation marks.</q>
+
+        <!-- Div Tag  -->
+        <div
+        id="myDiv"
+        style="font-family: Helvetica; font-size: 12pt; border: 1px solid black;"
+        >
+      <div
+        id="subDiv1"
+        style="color: #ff0000; border: 1px dotted black; margin: 10px;"
+        >
+        <h5>Section 1</h5>
+        <p>This paragraph would be your content paragraph...</p>
+        <p>Here's another content article right here.</p>
+      </div>
+      <br />
+      <div
+        id="subDiv2"
+        style="color: #ff00ff; border: 1px dashed black; margin: 10px;"
+      >
+        <h5>Section 2</h5>
+        <p>This paragraph would be your content paragraph...</p>
+        <p>Here's another content article right here.</p>
+      </div>
+    </div>
+
+</body>
+</html>
