@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Links</title>
+    <style>
+        #button1{
+            padding: 10px 20px;
+            background-color: red;
+            color: aliceblue;
+            text-decoration: none;
+            display: inline-block;
+            width: 200px;
+            margin-right: 20px;
+            text-align: center;
+        }
+        #button1:hover{
+            border: 1px solid red;
+            color: black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <a id="top"></a>
+    <!-- External Linking  -->
+    <a title="link to headings" href="./Headings.html">Link To Headings</a>
+    <br>
+    <a title="Link to Inline elements" href="./Inline_Elements.html">Inline Elements</a>
+    <br>
+    <!-- Open in a new window  -->
+    <a href="http://www.google.com"
+   onclick="window.open(this.href, 'newwindow', 'width=300, height=250, resizable=yes, scrollbars=yes'); 
+   return false;"
+>  Google</a> <br><br>
+
+    <!-- Botton link  -->
+    <a id="button1" href="BlockLevel_Elements.html">BlockLevel</a><br><br>
+
+    <!-- Internal Linking  -->
+    <a href="#section1">Section-1</a>
+    <a href="#section2">Section-2</a>
+    <a href="#section3">Section-3</a>
+    <a href="#section4">Section-4</a>
+    <a href="#section5">Section-5</a>
+
+    <h2 id="section1">Section-1</h2>
+    <p title="This is paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corporis reprehenderit id veniam deleniti facere enim nostrum quisquam. Eum libero similique perspiciatis omnis, excepturi fugiat expedita earum porro veniam accusantium blanditiis quia natus ipsam, repellendus incidunt quibusdam neque odio debitis! Eaque officiis error reprehenderit id? Aliquid libero dolore voluptatibus accusantium?</p>
+    <h2 id="section2">Section-2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corporis reprehenderit id veniam deleniti facere enim nostrum quisquam. Eum libero similique perspiciatis omnis, excepturi fugiat expedita earum porro veniam accusantium blanditiis quia natus ipsam, repellendus incidunt quibusdam neque odio debitis! Eaque officiis error reprehenderit id? Aliquid libero dolore voluptatibus accusantium?</p>
+    <h2 id="section3">Section-3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corporis reprehenderit id veniam deleniti facere enim nostrum quisquam. Eum libero similique perspiciatis omnis, excepturi fugiat expedita earum porro veniam accusantium blanditiis quia natus ipsam, repellendus incidunt quibusdam neque odio debitis! Eaque officiis error reprehenderit id? Aliquid libero dolore voluptatibus accusantium?</p>
+    <h2 id="section4">Section-4</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corporis reprehenderit id veniam deleniti facere enim nostrum quisquam. Eum libero similique perspiciatis omnis, excepturi fugiat expedita earum porro veniam accusantium blanditiis quia natus ipsam, repellendus incidunt quibusdam neque odio debitis! Eaque officiis error reprehenderit id? Aliquid libero dolore voluptatibus accusantium?</p>
+    <h2 id="section5">Section-5</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corporis reprehenderit id veniam deleniti facere enim nostrum quisquam. Eum libero similique perspiciatis omnis, excepturi fugiat expedita earum porro veniam accusantium blanditiis quia natus ipsam, repellendus incidunt quibusdam neque odio debitis! Eaque officiis error reprehenderit id? Aliquid libero dolore voluptatibus accusantium?</p>
+    <p style="text-align: right;"><a href="#top">Go To Top</a></p><br>
+    <img src="./pic.jpg" alt="" width="300" height="200">
+    <br/><br/>
+    <a href="./pic.jpg" download="Home">Click to download</a><br><br>
+
+    <!-- Link to Email Address  -->
+    <a href="mailto: varhenysneha1109@gmail.com">Email Me</a>
+</body>
+</html>
