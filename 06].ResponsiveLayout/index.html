@@ -17,7 +17,7 @@
       width: 1200px;
       margin: 0px auto;
     }
-    
+
     @media (min-width: 1201px) {
       #header {
         background-color: lightgrey;
@@ -30,7 +30,8 @@
         font-size: 40px;
         color: white;
       }
-    #content::after {
+
+      #content::after {
         content: '';
         display: block;
         clear: both;
@@ -38,8 +39,6 @@
 
       #left-sidebar {
         width: 20%;
-        /* height: 515px; */
-        /* border: solid blue; */
         float: left;
       }
 
@@ -71,7 +70,6 @@
       #right-sidebar {
         width: 78%;
         height: 715px;
-        /* border: solid green; */
         float: right;
         background-color: goldenrod;
         border-radius: 15px;
@@ -110,7 +108,6 @@
         color: white;
       }
 
-      
       #content::after {
         content: '';
         display: block;
@@ -192,6 +189,10 @@
         color: white;
       }
 
+      #content {
+        /* border: 5px solid red; */
+      }
+
       #content::after {
         content: '';
         display: block;
@@ -200,6 +201,8 @@
 
       #left-sidebar {
         width: 20%;
+        /* height: 515px; */
+        /* border: solid blue; */
         float: left;
         display: flex;
         flex-direction: column;
@@ -210,6 +213,7 @@
         width: 100%;
         height: 715px;
         background-color: blueviolet;
+        /* margin-bottom: 15px; */
         border-radius: 15px;
         display: flex;
         justify-content: center;
@@ -363,6 +367,7 @@
       }
 
       #content {
+        /* border: 5px solid red; */
         display: flex;
         flex-direction: column;
       }
@@ -376,11 +381,17 @@
       #left-sidebar {
         order: 2;
         width: 100%;
+        /* height: 515px; */
+        /* border: solid blue; */
+        /* float: left; */
+        /* display: flex; */
+        /* flex-direction: row; */
       }
 
       #nav {
         order: 2;
         width: 100%;
+        /* float: left; */
         height: 200px;
         background-color: blueviolet;
         margin-bottom: 15px;
