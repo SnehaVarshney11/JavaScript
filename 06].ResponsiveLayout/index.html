@@ -18,6 +18,14 @@
       margin: 0px auto;
     }
 
+    /* 
+1. 1201 or ---
+2. 1025 to 1200
+3. 769 to 1024
+4. 481 tp 768
+5. 0  to  480  
+*/
+
     @media (min-width: 1201px) {
       #header {
         background-color: lightgrey;
@@ -31,6 +39,10 @@
         color: white;
       }
 
+      #content {
+        /* border: 5px solid red; */
+      }
+
       #content::after {
         content: '';
         display: block;
@@ -39,6 +51,8 @@
 
       #left-sidebar {
         width: 20%;
+        /* height: 515px; */
+        /* border: solid blue; */
         float: left;
       }
 
@@ -70,6 +84,7 @@
       #right-sidebar {
         width: 78%;
         height: 715px;
+        /* border: solid green; */
         float: right;
         background-color: goldenrod;
         border-radius: 15px;
@@ -107,7 +122,10 @@
         font-size: 40px;
         color: white;
       }
-      
+
+      #content {
+        /* border: 5px solid red; */
+      }
 
       #content::after {
         content: '';
@@ -117,6 +135,8 @@
 
       #left-sidebar {
         width: 20%;
+        /* height: 515px; */
+        /* border: solid blue; */
         float: left;
         display: flex;
         flex-direction: column;
@@ -127,6 +147,7 @@
         width: 100%;
         height: 400px;
         background-color: blueviolet;
+        /* margin-bottom: 15px; */
         border-radius: 15px;
         display: flex;
         justify-content: center;
@@ -152,6 +173,7 @@
       #right-sidebar {
         width: 78%;
         height: 715px;
+        /* border: solid green; */
         float: right;
         background-color: goldenrod;
         border-radius: 15px;
