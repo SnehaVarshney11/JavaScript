@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Tables</title>
+    <style>
+        table
+        {
+            border-collapse: collapse;
+            background-color: beige;
+        }
+        th
+        {
+            background-color: grey;
+            color: white;
+        }
+        tfoot tr
+        {
+            background-color: lightgray !important; 
+            /* important forcefully apply css  */
+        }
+        /* nth child is used when we have to select a paticular row  */
+        tr:nth-child(even){
+            background-color: white;
+        }
+        tr:nth-child(odd){
+            background-color: darkseagreen;
+        }
+        table,td,tr,th
+        {
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+        }
+        caption
+        {
+            /* caption-side: bottom; */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table width="600" align="center">
+    <thead>
+        <!-- Caption : Description of the table -->
+        <caption>
+            List of Courses
+        </caption>
+        <!-- colgroup is always after the caption and before semantic table attribute -->
+        <colgroup span="2" style="background-color: lightgray;"></colgroup>
+        <tr>
+            <!-- Heading -->
+            <th>Course Name</th>
+            <th>Cousre Duration</th>
+            <th>Course Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows and Columns -->
+        <tr>
+            <td>Programming Languages</td>
+            <td width="100">2 Months</td>
+            <td>Rs. 5000/-</td>
+        </tr>
+        <tr>
+            <td>Web Development
+                <!-- Nested table -->
+                <table align="center">
+                    <tr>
+                        <td>Front-End</td>
+                        <td>Back-End</td>
+                    </tr>
+                </table>
+            </td>
+            <!-- <td rowspan="2">Web Development</td> -->
+            <td>4 Months</td>
+            <td>Rs. 1500/-</td>
+        </tr>
+        <tr>
+            <td>Server Side Programming</td>
+            <td>4 Months</td>
+            <td>Rs. 15000/-</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <!-- colspan is used to merge two columns and rowspan for merging the rows -->
+            <td colspan="2">Toatl Cost</td>
+            <td>Rs. 45000/-</td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>
