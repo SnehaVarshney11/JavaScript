@@ -12,18 +12,20 @@
         Name: tells the server from which form data is going to be received
         Target: on which tab you are going to open
         Encryption: how to encode data-->
-    <form action="Welcome.html" method="get" name="form1" target="_blank" novalidate>
+     <form action="data.html" method="GET"> <!--name="form1" target="_blank" novalidate> -->
     <div>
         <!-- label creates text for input element -->
-        <label for="">First Name</label>
-        <input type="text" name="fname" required><br><br>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="fname" placeholder="Enter first name" required><br><br>
     </div>
     <div>
-        <label for="">Last Name</label>
-        <input type="text" name="lname"><br><br>
+        <label>Password
+        <input type="password" name="pwd"><br><br>
+    </label>
     </div>
-        <input type="submit">
+        <input type="submit" name="Submit_btn" value="Click Me">
+        <input type="reset" name="Reset">
     </form>
-    
+
 </body>
 </html>
