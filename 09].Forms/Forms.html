@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Forms</title>
+</head>
+<body>
+    <!--Action: where to send data 
+        Method: How to send data, two values: GET and POST
+        Name: tells the server from which form data is going to be received
+        Target: on which tab you are going to open
+        Encryption: how to encode data-->
+    <form action="Welcome.html" method="get" name="form1" target="_blank" novalidate>
+    <div>
+        <!-- label creates text for input element -->
+        <label for="">First Name</label>
+        <input type="text" name="fname" required><br><br>
+    </div>
+    <div>
+        <label for="">Last Name</label>
+        <input type="text" name="lname"><br><br>
+    </div>
+        <input type="submit">
+    </form>
+</body>
+</html>
