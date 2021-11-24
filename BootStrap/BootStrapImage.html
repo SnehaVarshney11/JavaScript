@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Image</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .mymargin
+        {
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mb-3">Bootstrap Image Styles</h1>
+
+        <!-- Image Center -->
+        <!-- <img src="image.png" alt="" class="d-block mx-auto" /> -->
+        <!-- Floating Images -->
+        <img src="image.png" alt="" class="float-end"/> 
+        <img src="img1.jpg" alt="float-start"/>
+        <div class="clearfix mb-3"></div>
+        <!-- by clearfix images can come in next line automatically -->
+        <img src="img2.png" alt="">
+        <img src="image.png" alt="">
+        <div class="clearfix mb-3"></div>
+        <!-- Different style of images -->
+        <div class="mydiv text-center">
+            <img src="img1.jpg" class="rounded">
+            <img src="img2.png" class="rounded-circle">
+            <img src="image.png" class="img-thumbnail">
+            <!-- img-fluid makes the image responsive -->
+        </div>
+    </div>
+    <div class="mymargin"></div>
+</body>
+</html>
