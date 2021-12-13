@@ -17,14 +17,14 @@ Now, HTML is being widely used to format web pages with the help of different ta
 </html>
 
 
-# Full_JS
+# ** Full_JS
 * JavaScript is a client-side scripting language of web developed by Netscape in 1995 with the name LiveScript.
 * JavaScript is used to build interactive websites with dynamic features and to validate form data.
 * JavaScript is also known as the Programming Language of web as it is the only programming language for Web browsers. 
 * JavaScript is an object-based scripting language which is lightweight and cross-platform.
 * The programs in this language are called scripts.
 
-# * JavaScript Facts
+# JavaScript Facts
 Some popular facts about JavaScript.
 
 * JavaScript is the only client-side scripting (i.e. browser interpreted) language.
