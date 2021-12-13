@@ -17,7 +17,7 @@ Now, HTML is being widely used to format web pages with the help of different ta
 </html>
 
 
-# ** Full_JS
+# Full_JS
 * JavaScript is a client-side scripting language of web developed by Netscape in 1995 with the name LiveScript.
 * JavaScript is used to build interactive websites with dynamic features and to validate form data.
 * JavaScript is also known as the Programming Language of web as it is the only programming language for Web browsers. 
@@ -40,3 +40,8 @@ Some popular facts about JavaScript.
 * JavaScript can detect user physical location using HTML5 Geolocation API.
 * JavaScript can also be used to draw shapes, graphs, create animations and games development using HTML5 Canvas.
 * At present, JavaScript has lot of libraries and framework, exp JQuery, Angular JS, React JS, Backbone JS etc, thus making JavaScript more popular.
+
+# Write JavaScript in Webpage
+Based on where JavaScript coding is written, JavaScript is categorized in three parts, Internal JavaScript, External JavaScript, and Inline JavaScript. 
+1. Internal JavScript: In Internal JavaScript, JavaScript coding is written inside head or body within
+```<script> tag``` 
