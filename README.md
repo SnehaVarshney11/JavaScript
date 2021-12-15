@@ -29,7 +29,7 @@ Some popular facts about JavaScript.
 
 * JavaScript is the only client-side scripting (i.e. browser interpreted) language.
 * JavaScript can build interactivity Websites.
-* JavaScript is Object-Based.
+* JavaScript is Object-Based and Event (click, hover key press, load, scroll etc) based programming language.
 * JavaScript is Case Sensitive.
 * JavaScript can put dynamic content into a webpage.
 * JavaScript can react to events like Click, mouse over, mouse out, form submit etc known as JavaScript Events.
@@ -41,7 +41,61 @@ Some popular facts about JavaScript.
 * JavaScript can also be used to draw shapes, graphs, create animations and games development using HTML5 Canvas.
 * At present, JavaScript has lot of libraries and framework, exp JQuery, Angular JS, React JS, Backbone JS etc, thus making JavaScript more popular.
 
+# Benefits of JAVASCRIPT
+* Web Develpomet
+* Desktop App Development
+* Mobile App Development
+
 # Write JavaScript in Webpage
 Based on where JavaScript coding is written, JavaScript is categorized in three parts, Internal JavaScript, External JavaScript, and Inline JavaScript. 
-1. Internal JavScript: In Internal JavaScript, JavaScript coding is written inside head or body within
+1. Internal JavScript :- In Internal JavaScript, JavaScript coding is written inside head or body within
 ```<script> tag``` 
+``` 
+<script>
+  document.write('Hello Javascript');
+</script>
+```
+
+2. External JavaScript :- In External JavaScript, javascript code is written in external file with .js extension and then linked with script tag.
+```
+<script src="custom.js"></script>  
+```
+
+3. Inline JavaScript :- In Inline JavaScript, javascript code is written directly inside html tags. All though this is not recommended. Script should be written in separate file( external) or in ```<script> tag.```
+```
+<button onclick="alert('Hello JS')">Check</button>
+
+<marquee onmouseover="stop()" onmouseout="start()">Hello Javascript</marquee>
+
+<a href="javascript:void(0)" onclick="print()">Print</a>
+```
+NOTE: Write JavaScript coding in head tag only when we want script to execute first, like to disable text selection, page redirection, notifications etc. Rest all script like JQuery, Angular JS or custom JS should be written just before body closing tag.
+
+# JavaScript Dialog Box
+JavaScript supports three dialog box. These dialog boxes are build in functions of window object. Three dialog box in JavaScript are alert, prompt and confirm.
+1) alert():- Alert box, i.e alert() or window.alert() is used to show output in dialog box. For alerts, use alert(). Alert generally block the code, thus next code block will run only after alert is closed. 
+```
+Example : 
+<script>
+  var x = 'hello js';
+  alert(x);
+</script>
+```
+2) prompt():- prompt() or window.prompt() dialog box is used to receive input from user.
+```
+Example :
+<script>
+  var x = prompt('Enter Name');
+  alert(x);
+</script>
+```
+3) confirm():- confirm() or window.confirm() dialog box is used to get confirmation from user. This will show Ok or Cancel in dialog box.
+```
+Example :
+<script>
+  var x = confirm('Press Ok or Cancel');
+  alert(x);
+</script>
+```
+* Noscript Tag :- This tag is an html element used when JavaScript is disabled in web browser. If JavaScript is enable, noscript tag is invisible.
+* NOTE :- If we want to add any html tag inside js then that tag should be in double quotes. 
