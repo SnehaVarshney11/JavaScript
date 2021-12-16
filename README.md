@@ -98,4 +98,19 @@ Example :
 </script>
 ```
 * Noscript Tag :- This tag is an html element used when JavaScript is disabled in web browser. If JavaScript is enable, noscript tag is invisible.
-* NOTE :- If we want to add any html tag inside js then that tag should be in double quotes. 
+* NOTE :- If we want to add any html tag inside js then that tag should be in double quotes.
+
+# Variables
+There are three variables: Var, Let, Const
+* How to write varibale name: 1) firstname, 2) first_name, 3) first-name, 4) firstName, 5) firstname99
+* NOTE: If we display a variable which has no value then output would be "undefined"
+* Difference between Var & let :- we can declare variables in var again but we can't declare variables again in let. 
+
+# Data Types
+* var x = "Hello"; --> String
+* var x = 123; ---> Number
+* var x = true / false ---> Boolean
+* var x = ["a", "b"]; ---> Array
+* var x = {first : "Jane", last : "Doe"}; ---> Object
+* var x = null; ---> Null
+* var x; ---> Undefined
