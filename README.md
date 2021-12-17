@@ -114,3 +114,7 @@ There are three variables: Var, Let, Const
 * var x = {first : "Jane", last : "Doe"}; ---> Object
 * var x = null; ---> Null
 * var x; ---> Undefined
+
+# Operators
+* Arithmetic Operator: +, -, *, ** (Exponentiation), /, %, ++, --
+* Assignment Operator: =, +=, -=, *=, **=, /*. %=
