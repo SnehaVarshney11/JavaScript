@@ -118,3 +118,5 @@ There are three variables: Var, Let, Const
 # Operators
 * Arithmetic Operator: +, -, *, ** (Exponentiation), /, %, ++, --
 * Assignment Operator: =, +=, -=, *=, **=, /*. %=
+* Comparison Operator: ==, === (equal value and equal type), !=, !==, >, <, >=, <=
+* Logical Operator: &&, ||, !
