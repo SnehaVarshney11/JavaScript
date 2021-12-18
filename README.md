@@ -120,3 +120,4 @@ There are three variables: Var, Let, Const
 * Assignment Operator: =, +=, -=, *=, **=, /*. %=
 * Comparison Operator: ==, === (equal value and equal type), !=, !==, >, <, >=, <=
 * Logical Operator: &&, ||, !
+* Conditional Operator: (Condition) ? True Statement : False Statement
