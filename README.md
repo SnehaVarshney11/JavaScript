@@ -121,3 +121,13 @@ There are three variables: Var, Let, Const
 * Comparison Operator: ==, === (equal value and equal type), !=, !==, >, <, >=, <=
 * Logical Operator: &&, ||, !
 * Conditional Operator: (Condition) ? True Statement : False Statement
+
+# Function
+```
+function functionName(){ <-- Function Definition
+    Statement
+}   
+functionName(); <-- Calling a function
+```
+
+# Variable
