@@ -129,5 +129,30 @@ function functionName(){ <-- Function Definition
 }   
 functionName(); <-- Calling a function
 ```
+* Gobal Variable --> It works inside function or outside the function.
+* Local Variable --> It works only inside the function.
 
-# Variable
+# Events 
+* Click (onclick), Double Click (ondblclick), Right Click (oncontextmenu), Mouse Hover (onmouseenter), Mouse Out (onmouseout), Mouse Down (onmousedown), Mouse Up (onmouseup), Key Press (onkeypress), Key Up (onkeyup), Load (onload), Unload (onunload), Resize (onresize), Scroll (onscroll).  
+NOTE: onkeypress works on body tag or inside form tag. 
+
+# While Loop
+```
+Initialize Variable
+while(condition){
+  Statement
+  Increment / Decrement 
+}
+```
+# Do While Loop
+```
+Initialize Variable
+do{
+  statement
+  Increment / Decrement 
+}while(condition)
+```
+# For Loop
+```
+for(var initialization; condition; increment/decrement)
+```
