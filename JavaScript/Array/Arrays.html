@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Arrays</title>
+    <script>
+        var arr = [10,20,30,40,50];
+        var sum = 0;
+        document.write("<ul>");
+        for(var a = 0; a <= 4; a++){
+            document.write("<li>" + arr[a] + "</li>");
+            sum = sum + arr[a];
+        }
+        document.write("</ul>");
+        document.write("Total Sum : "+sum);
+
+        // Second method to input the array
+        var arr = new Array(10,"Sneha",true,4.0,null);
+        var sum = 0;
+        document.write("<ul>");
+        for(var a = 0; a <= 4; a++){
+            document.write("<li>" + arr[a] + "</li>");
+        }
+        document.write("</ul>");
+
+        // Third way to input the array
+        var arr = new Array();
+        arr[0] = 10;
+        arr[1] = "Sneha";
+        arr[3] = true;
+        for(var a = 0; a <= 4; a++){
+            document.write("<li>" + arr[a] + "</li>");
+        }
+        document.write("</ul>");
+        document.write("<br>");
+
+        // Fourth way -> by user input
+        var ar = new Array(3);
+
+        for(var i = 0; i < 3; i++){
+            ar[i] = prompt("Enter the value");
+        }
+        for(var a = 0; a < 3; a++){
+            document.write("<li>" + ar[a] + "</li>");
+        }
+        document.write("</ul>");
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
