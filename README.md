@@ -156,3 +156,9 @@ do{
 ```
 for(var initialization; condition; increment/decrement)
 ```
+# Data Type
+* String, Number, Boolean, Array, Object, Null, Undefined
+# Array Methods
+```
+sort(), reverse(), pop()--> delete the value of last index, push()--> add the value in last index, shift()--> delete first element, unshift()--> add the value in starting index, concat(), join(), slice(), splice(), isArray(), indexOf(), lastIndexOf(), entries(), every(), filter(), find(), findIndex(), includes(), some(), foreach(), toString(), valueOf(), fill(). 
+```
