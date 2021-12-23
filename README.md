@@ -123,6 +123,15 @@ There are three variables: Var, Let, Const
 * Conditional Operator: (Condition) ? True Statement : False Statement
 
 # Function
+* A function is a group of statements that perform specific tasks and can be kept and maintained separately from main program. Functions provide a way to create reusable code packages that are more portable and easier to debug.
+* <i><b>typeof opertor</b></i> can check the datatype of the function. 
+* JavaScript functions are first-class objects. This means they are very powerful in JavaScript as compared to other programming languages. They are even more powerful than objects.
+* <b>Why JavaScript Functions are first-class objects?</b>
+    1. Functions can be assigned to variables.
+    2. Functions can have properties and methods.
+    3. Functions can return functions.
+    4. Functions can have callbacks.
+* Advanges :- Code reusability, Less Coding, Eliminates errors
 ```
 function functionName(){ <-- Function Definition
     Statement
@@ -131,6 +140,8 @@ functionName(); <-- Calling a function
 ```
 * Gobal Variable --> It works inside function or outside the function.
 * Local Variable --> It works only inside the function.
+# Function hoisting
+* The function hoisting is a mechanism that the JavaScript engine physically moves function declarations to the top of the code before executing them.
 
 # Events 
 * Click (onclick), Double Click (ondblclick), Right Click (oncontextmenu), Mouse Hover (onmouseenter), Mouse Out (onmouseout), Mouse Down (onmousedown), Mouse Up (onmouseup), Key Press (onkeypress), Key Up (onkeyup), Load (onload), Unload (onunload), Resize (onresize), Scroll (onscroll).  
@@ -162,3 +173,12 @@ for(var initialization; condition; increment/decrement)
 ```
 sort(), reverse(), pop()--> delete the value of last index, push()--> add the value in last index, shift()--> delete first element, unshift()--> add the value in starting index, concat(), join(), slice(), splice(), isArray(), indexOf(), lastIndexOf(), entries(), every(), filter(), find(), findIndex(), includes(), some(), foreach(), toString(), valueOf(), fill(). 
 ```
+
+# DOM
+* How to target DOM Object -> By ID, By Class Name, By Tag Name
+* <b>DOM Targeting Model</b> --> document, document.all, document.documentElement, document.head, document.title, document.body, document.images, document.anchors, document.links, document.forms, document.doctype, document.URL, document.baseURI, document.domain, getElementById(), getElementsByClassName(), getElementsByTagName()
+* What we can get with DOM --> HTML, Text, Attribute
+* <b>DOM Get Method</b> --> innerText, innerHTML, getAttribute, getAttributeNode, attributes
+* <b>DOM Set Method</b> --> innerText, innerHTML, setAttribute, Attribute, removeAttribute
+
+              
