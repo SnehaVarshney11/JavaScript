@@ -173,6 +173,14 @@ for(var initialization; condition; increment/decrement)
 ```
 sort(), reverse(), pop()--> delete the value of last index, push()--> add the value in last index, shift()--> delete first element, unshift()--> add the value in starting index, concat(), join(), slice(), splice(), isArray(), indexOf(), lastIndexOf(), entries(), every()--> It checks every value of array , filter()--> it creates an aaray filled with all elements that passes a test   , find(), findIndex(), includes(), some()--> it checks if any of the elements in array pass a test , foreach(), toString()--> converts an array into String and returns the result , valueOf()--> returns the array, fill()--> fill all elements in array with static value . 
 ```
+# Object
+* It is advanced version of array. 
+* Syntax 
+```
+var a = {index_name(properties) : value};
+```
+* We can create array into object. 
+* We can multiple functions inside object. 
 
 # DOM
 * How to target DOM Object -> By ID, By Class Name, By Tag Name
