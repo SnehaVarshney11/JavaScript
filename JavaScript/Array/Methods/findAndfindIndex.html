@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find and findIndex</title>
+    <script>
+        // find(function name) -> returns the value of first element in aaray that pass a test 
+        var ages = [10, 23, 18, 20];
+        document.write(ages + "<br><br>");
+
+        var b = ages.find(checkAult);
+        document.write(b + "<br><br>");
+
+        function checkAult(age){
+            return age >= 18;
+        }
+
+        // findIndex(function name) -> returns the index of first element in aaray that pass a test
+        var b = ages.findIndex(checkAult);
+        document.write(b + "<br><br>"); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
