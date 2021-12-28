@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map method</title>
+    <script>
+        var ar = [11, 4, 9, 16];
+        var b = ar.map(test);
+        document.write(b + "<br><br>");
+        function test(x){
+            return x * 10;
+        }
+
+        var a = [
+            {fname : "Ram", age : 25},
+            {fname : "Sita", age : 21},
+            {fname : "Shyam", age : 18}
+        ];
+        var c = a.map(check);
+        document.write(c);
+        function check(x){
+            return x.fname + " " + x.age;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
