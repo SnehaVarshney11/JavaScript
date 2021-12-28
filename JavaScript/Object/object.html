@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Object</title>
+    <script>
+        // First Method 
+        var a = {
+            fname : 'Sneha',
+            lname : 'Varshney',
+            age : 19,
+            email : 'varshneysneha1109@gmail.com',
+            favMovie : ['Dhoom', 'Sholay', 'Hum'],
+            salary : function(){
+                return 25000;
+            },
+            fullname : function(){
+                return this.fname + " " + this.lname;
+            }
+        };
+        document.write(a.favMovie + "<br><br>");
+        console.log(a);
+
+        // Second Method 
+        var person = new Object();
+        person.firstName = 'Ram';
+        person.lastName = 'Kumar';
+        person.age = 25;
+
+        document.write(person.firstName + "<br>");
+        // we can also write like this 
+        document.write(person['firstName']);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
