@@ -167,6 +167,13 @@ do{
 ```
 for(var initialization; condition; increment/decrement)
 ```
+# for/in Loop
+* Used to print the value of object
+```
+for(var i in a){
+  statement
+}
+```
 # Data Type
 * String, Number, Boolean, Array, Object, Null, Undefined
 # Array Methods
