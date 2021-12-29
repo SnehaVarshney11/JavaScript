@@ -189,6 +189,11 @@ var a = {index_name(properties) : value};
 * We can create array into object. 
 * We can multiple functions inside object. 
 
+# String Methods
+```
+length--> Property, toLowerCase(), toUpperCase(), includes(), startsWith(), endsWith(), search(), match(), indexOf(), lastIndexOf(), replace(), trim(), charAt(), charCodeAt(), fromCharCode(), concat(), split(), repeat(), slice(), substr(), substring(), toString(), valueOf().
+```
+
 # DOM
 * How to target DOM Object -> By ID, By Class Name, By Tag Name
 * <b>DOM Targeting Model</b> --> document, document.all, document.documentElement, document.head, document.title, document.body, document.images, document.anchors, document.links, document.forms, document.doctype, document.URL, document.baseURI, document.domain, getElementById(), getElementsByClassName(), getElementsByTagName()
