@@ -193,6 +193,15 @@ var a = {index_name(properties) : value};
 ```
 length--> Property, toLowerCase(), toUpperCase(), includes(), startsWith(), endsWith(), search(), match(), indexOf(), lastIndexOf(), replace(), trim(), charAt(), charCodeAt(), fromCharCode(), concat(), split(), repeat(), slice(), substr(), substring(), toString(), valueOf().
 ```
+# Number Methods
+```
+number(), parseInt(), parseFloat(), isFinite(), isInteger(), toFixed(x), toPrecision()
+```
+# Math Methods
+* Used in animations, vedio game development, complex accouting web applications
+```
+ceil(), floor(), round(), trunc(), max(x,y,z...n), min(x,y,z...n), sqrt(), cbrt(), pow(x,y), random(), abs(x), PI
+``` 
 
 # DOM
 * How to target DOM Object -> By ID, By Class Name, By Tag Name
