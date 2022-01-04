@@ -202,6 +202,12 @@ number(), parseInt(), parseFloat(), isFinite(), isInteger(), toFixed(x), toPreci
 ```
 ceil(), floor(), round(), trunc(), max(x,y,z...n), min(x,y,z...n), sqrt(), cbrt(), pow(x,y), random(), abs(x), PI
 ``` 
+# Date Object
+* <b>Syntax<b> -> var now = new Date();
+# Date Methods
+```
+toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds()
+```
 
 # DOM
 * How to target DOM Object -> By ID, By Class Name, By Tag Name
