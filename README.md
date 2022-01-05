@@ -229,5 +229,7 @@ toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getM
 * What we can get with DOM --> HTML, Text, Attribute
 * <b>DOM Get Method</b> --> innerText, innerHTML, getAttribute, getAttributeNode, attributes
 * <b>DOM Set Method</b> --> innerText, innerHTML, setAttribute, Attribute, removeAttribute
+* <b>DOM Targeting Methods</b> 1) querySelector -> document.querySelector(CSS Selector), 2) querySelectorAll -> document.querySelectorAll(CSS Selector)
+* <b> DOM CSS Styling Methods: 1. Style, 2. className, 3. classList
 
               
