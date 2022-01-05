@@ -209,7 +209,20 @@ ceil(), floor(), round(), trunc(), max(x,y,z...n), min(x,y,z...n), sqrt(), cbrt(
 toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds()
 ```
 
-# DOM
+# DOM - Document Object Model
+            document
+            root (html)
+              /      \
+    element : <head>     element : <body>
+            |                 /           \
+    element : <title>     element : <nav>   element : <h1>
+            |                     |                 |
+    Text : 'New Website'  elemenr : <a>     Text : 'Welcome'
+                                  |               |
+                          Text : 'About Us'  attribute : 'id'
+                                  |                 |
+                          attribute : 'class'   attribute : 'class'
+              
 * How to target DOM Object -> By ID, By Class Name, By Tag Name
 * <b>DOM Targeting Model</b> --> document, document.all, document.documentElement, document.head, document.title, document.body, document.images, document.anchors, document.links, document.forms, document.doctype, document.URL, document.baseURI, document.domain, getElementById(), getElementsByClassName(), getElementsByTagName()
 * What we can get with DOM --> HTML, Text, Attribute
