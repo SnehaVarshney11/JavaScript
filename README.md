@@ -211,6 +211,7 @@ toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getM
 
 # DOM - Document Object Model
             document
+                |
             root (html)
               /      \
     element : <head>     element : <body>
