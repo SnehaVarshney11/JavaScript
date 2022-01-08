@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList Methods</title>
+    <style>
+        #outer{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            /* background: lightsalmon; */
+        }
+        #inner{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto 0;
+            background: mediumorchid;
+        }
+        .abc{
+            background: pink;
+        }
+        .xyz{
+            background: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="outer" class="abc xyz efg">
+        <h2>Outer</h2>
+        <div id="inner">
+            <h2>Inner</h2>
+        </div>
+    </div>
+    <script src="classList.js"></script>
+</body>
+</html>
