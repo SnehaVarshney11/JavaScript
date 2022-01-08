@@ -231,5 +231,11 @@ toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getM
 * <b>DOM Set Method</b> --> innerText, innerHTML, setAttribute, Attribute, removeAttribute
 * <b>DOM Targeting Methods</b> 1) querySelector -> document.querySelector(CSS Selector), 2) querySelectorAll -> document.querySelectorAll(CSS Selector)
 * <b> DOM CSS Styling Methods: 1. Style, 2. className, 3. classList
-
-              
+* <b><u>Assign Event Using the HTML DOM --></u> </b><br>
+document.getElementById(Id).onclick = functionName;<br>
+* <b><u>addEventListener() Method --></u></b><br>
+document.getElementById(Id).addEventListner("click", functionName);
+* <b>UseCapture :- </b><br>
+addEventListner(event, function, useCapture);
+* <b>removeEventListener() Method --> </b><br>
+element.removeEventListner(eventName, functionName);
