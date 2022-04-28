@@ -239,5 +239,7 @@ document.getElementById(Id).addEventListner("click", functionName);
 addEventListner(event, function, useCapture);
 * <b>removeEventListener() Method --> </b><br>
 element.removeEventListner(eventName, functionName);
-* <b><u>classList Methods: </u></b><br>
+* <b><u>classList Methods: </u></b>
 1) add(class1, class2, ....),  2) remove(class1, class2, ...),  3) toogle(class), 4) contains(class), 5) item(index), 6) Length  
+* <b><u>Traversal Methods: </u></b>
+parentNode, parentElement, children, childNodes, firstChild, firstElementChild, lastChild, lastElementChild, nextElementSibling, nextSibling, previousElementSibling, previousSibling
