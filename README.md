@@ -245,6 +245,32 @@ toString() , toDateString() , toUTCString() , toISOString()
 ### Date Methods :- 
 toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds()
 
+### UTC Date Get Methods :-
+getUTCDate(), getUTCFullYear(), getUTCMonth(), getUTCDay(), getUTCHours(), getUTCMinutes(), getUTCSeconds(), getUTCMilliseconds()
+
+### The getTimezoneOffset() Method :-
+The getTimezoneOffset() method returns the difference (in minutes) between local time and UTC time.
+
+## The Nullish Coalescing Operator (??) :- 
+The ?? operator returns the first argument if it is not nullish (null or undefined). Otherwise it returns the second argument.
+```
+let name = null;
+let text = "missing";
+let result = name ?? text;
+
+O/P :- The name is missing
+```
+
+## The Optional Chaining Operator (?.) :-
+The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).
+```
+const car = {type:"Fiat", model:"500", color:"white"};
+// Ask for car name:
+document.getElementById("demo").innerHTML = car?.name;
+
+O/P :- Undefined 
+```
+
 
 
 
