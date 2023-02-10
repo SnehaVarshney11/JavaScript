@@ -122,6 +122,77 @@ There are three variables: Var, Let, Const
 * Logical Operator: &&, ||, !
 * Conditional Operator: (Condition) ? True Statement : False Statement
 
+# Array Iteration 
+## forEach() -> 
+The forEach() method calls a function (a callback function) once for each array element. 
+```
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt += value + "<br>";
+}
+```
+
+## map() ->
+The map() method creates a new array by performing a function on each array element.
+```
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value) {
+  return value * 2;
+}
+```
+
+## filter() ->
+The filter() method creates a new array with array elements that pass a test. 
+```
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}
+```
+
+## reduce() ->
+It is used to produce a single value output. It works from left to right in array. 
+```
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+```
+
+## reduceRight() -> 
+Same as reduce() method but the difference is; it works from right to left in array. 
+
+## every() ->
+The every() method checks if all array values pass a test. It produces output as true/ false.
+```
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}
+```
+
+## some() ->
+The some() method checks if some array values pass a test.
+
+## indexOf() & lastIndexOf() ->
+The indexOf() method searches an array for an element value and returns its position whereas Array.lastIndexOf() returns the position of the last occurrence of the specified element.
+
+## find() & findIndex() ->
+
+
+
+
 # Function
 * A function is a group of statements that perform specific tasks and can be kept and maintained separately from main program. Functions provide a way to create reusable code packages that are more portable and easier to debug.
 * <i><b>typeof opertor</b></i> can check the datatype of the function. 
