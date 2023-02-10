@@ -271,30 +271,6 @@ document.getElementById("demo").innerHTML = car?.name;
 O/P :- Undefined 
 ```
 
-
-
-
-# Function
-* A function is a group of statements that perform specific tasks and can be kept and maintained separately from main program. Functions provide a way to create reusable code packages that are more portable and easier to debug.
-* <i><b>typeof opertor</b></i> can check the datatype of the function. 
-* JavaScript functions are first-class objects. This means they are very powerful in JavaScript as compared to other programming languages. They are even more powerful than objects.
-* <b>Why JavaScript Functions are first-class objects?</b>
-    1. Functions can be assigned to variables.
-    2. Functions can have properties and methods.
-    3. Functions can return functions.
-    4. Functions can have callbacks.
-* Advanges :- Code reusability, Less Coding, Eliminates errors
-```
-function functionName(){ <-- Function Definition
-    Statement
-}   
-functionName(); <-- Calling a function
-```
-* Gobal Variable --> It works inside function or outside the function.
-* Local Variable --> It works only inside the function.
-# Function hoisting
-* The function hoisting is a mechanism that the JavaScript engine physically moves function declarations to the top of the code before executing them.
-
 # Events 
 * Click (onclick), Double Click (ondblclick), Right Click (oncontextmenu), Mouse Hover (onmouseenter), Mouse Out (onmouseout), Mouse Down (onmousedown), Mouse Up (onmouseup), Key Press (onkeypress), Key Up (onkeyup), Load (onload), Unload (onunload), Resize (onresize), Scroll (onscroll).  
 NOTE: onkeypress works on body tag or inside form tag. 
@@ -354,6 +330,104 @@ number(), parseInt(), parseFloat(), isFinite(), isInteger(), toFixed(x), toPreci
 ```
 ceil(), floor(), round(), trunc(), max(x,y,z...n), min(x,y,z...n), sqrt(), cbrt(), pow(x,y), random(), abs(x), PI
 ``` 
+
+# JavaScript Objects vs Maps
+```
+                Object	                                Map
+Iterable	    Not directly iterable	                Directly iterable
+Size	        Do not have a size property	            Have a size property
+Key Types	    Keys must be Strings (or Symbols)	    Keys can be any datatype
+Key Order	    Keys are not well ordered	            Keys are ordered by insertion
+Defaults	    Have default keys	                    Do not have default keys
+```
+
+# Regular Expression :-
+* A regular expression is a sequence of characters that forms a search pattern.
+* The search pattern can be used for text search and text replace operations.
+* <b> Syntax:- </b> /pattern/modifiers;
+* regular expressions are often used with the two string methods: search() and replace().<br>
+<b> Examples :- </b>
+```
+let text = "Visit W3Schools";         |   let text = "Visit Microsoft!";
+let n = text.search(/w3schools/i);    |   let result = text.replace(/microsoft/i, "W3Schools");
+```
+
+## Regular Expression Modifiers :-
+```
+Modifier	    Description	
+  i	            Perform case-insensitive matching	
+  g	            Perform a global match (find all matches rather than stopping after the first match)	
+  m	            Perform multiline matching
+```
+
+# Error Name Values :-
+```
+Error Name	                      Description
+  EvalError	                     An error has occurred in the eval() function
+  RangeError	                 A number "out of range" has occurred
+  ReferenceError	             An illegal reference has occurred
+  SyntaxError	                 A syntax error has occurred
+  TypeError	                     A type error has occurred
+  URIError	                     An error in encodeURI() has occurred
+```
+
+# Explicit Function Binding :-
+The call() and apply() methods are predefined JavaScript methods. They can both be used to call an object method with another object as argument.
+```
+const person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person2 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+
+// Return "John Doe":
+person1.fullName.call(person2);
+```
+```
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName = person.fullName.bind(member);
+```
+
+
+
+# Function
+* A function is a group of statements that perform specific tasks and can be kept and maintained separately from main program. Functions provide a way to create reusable code packages that are more portable and easier to debug.
+* <i><b>typeof opertor</b></i> can check the datatype of the function. 
+* JavaScript functions are first-class objects. This means they are very powerful in JavaScript as compared to other programming languages. They are even more powerful than objects.
+* <b>Why JavaScript Functions are first-class objects?</b>
+    1. Functions can be assigned to variables.
+    2. Functions can have properties and methods.
+    3. Functions can return functions.
+    4. Functions can have callbacks.
+* Advanges :- Code reusability, Less Coding, Eliminates errors
+```
+function functionName(){ <-- Function Definition
+    Statement
+}   
+functionName(); <-- Calling a function
+```
+* Gobal Variable --> It works inside function or outside the function.
+* Local Variable --> It works only inside the function.
+# Function hoisting
+* The function hoisting is a mechanism that the JavaScript engine physically moves function declarations to the top of the code before executing them.
+
 
 
 # DOM - Document Object Model
