@@ -242,7 +242,7 @@ The entries() method returns an Array Iterator object with key/value pairs :
 ### Methods to displaying dates :- 
 toString() , toDateString() , toUTCString() , toISOString()
 
-### Date Methods
+### Date Methods :- 
 toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds()
 
 
