@@ -189,6 +189,61 @@ The some() method checks if some array values pass a test.
 The indexOf() method searches an array for an element value and returns its position whereas Array.lastIndexOf() returns the position of the last occurrence of the specified element.
 
 ## find() & findIndex() ->
+The find() method returns the value of the first array element that passes a test function. <br>
+The findIndex() method returns the index of the first array element that passes a test function.
+
+## from() ->
+The Array.from() method returns an Array object from any object with a length property or any iterable object.
+```
+<script>
+  const myArr = Array.from("ABCDEFG");
+  document.getElementById("demo").innerHTML = myArr;
+</script>
+
+O/P :- A,B,C,D,E,F,G
+```
+
+## keys() ->
+The Array.keys() method returns an Array Iterator object with the keys of an array.
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
+
+for (let x of keys) {
+  text += x + "<br>";
+}
+
+O/P :- 1 2 3 4 in seperate lines.
+```
+
+## entries() ->
+The entries() method returns an Array Iterator object with key/value pairs :
+```
+[0, "Banana"]
+[1, "Orange"]
+[2, "Apple"]
+[3, "Mango"]
+```
+
+# Date
+### Creating Date Object :-
+* <b>Syntax<b> -> var now = new Date();
+* There are 9 ways to create it -
+1. new Date()
+2. new Date(date string)
+3. new Date(year,month)
+4. new Date(year,month,day)
+5. new Date(year,month,day,hours)
+6. new Date(year,month,day,hours,minutes)
+7. new Date(year,month,day,hours,minutes,seconds)
+8. new Date(year,month,day,hours,minutes,seconds,ms)
+9. new Date(milliseconds)
+
+### Methods to displaying dates :- 
+toString() , toDateString() , toUTCString() , toISOString()
+
+### Date Methods
+toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds()
 
 
 
@@ -273,12 +328,7 @@ number(), parseInt(), parseFloat(), isFinite(), isInteger(), toFixed(x), toPreci
 ```
 ceil(), floor(), round(), trunc(), max(x,y,z...n), min(x,y,z...n), sqrt(), cbrt(), pow(x,y), random(), abs(x), PI
 ``` 
-# Date Object
-* <b>Syntax<b> -> var now = new Date();
-# Date Methods
-```
-toDateString(), getDate(), getFullYear(), getMonth(), getDay(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds()
-```
+
 
 # DOM - Document Object Model
             document
