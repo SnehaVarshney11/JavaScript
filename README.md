@@ -227,7 +227,7 @@ The entries() method returns an Array Iterator object with key/value pairs :
 
 # Date
 ### Creating Date Object :-
-* <b>Syntax<b> -> var now = new Date();
+* <b>Syntax</b> -> var now = new Date();
 * There are 9 ways to create it -
 1. new Date()
 2. new Date(date string)
@@ -468,6 +468,28 @@ Import a default export from the file message.js:
 import message from "./message.js";
 ```
 
+# Converting a JSON Text to a JavaScript Object :-
+* JSON is JavaScript Object Notation used to when data is sent from server to web page. 
+* First, create a JS string containing JSON syntax :-
+```
+let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+```
+* Then use built-in function <b> JSON.parse() </b> to convert string into JSON object.
+```
+const obj = JSON.parse(text);
+```
+* Finally, use the new JavaScript object in your page:
+```
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+```
 
 
 
