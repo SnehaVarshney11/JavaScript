@@ -490,10 +490,82 @@ document.getElementById("demo").innerHTML =
 obj.employees[1].firstName + " " + obj.employees[1].lastName;
 </script>
 ```
+## JSON.stringify() :-
+Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+```
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
 
+let myString = JSON.stringify(person);
+document.getElementById("demo").innerHTML = myString; 
 
+O/P :- {"name":"John","age":30,"city":"New York"}
+```
 
+## Nested Object :-
+```
+myObj = {
+  name:"John",
+  age:30,
+  cars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+```
+* We can access it :- myObj.cars.car1 OR myObj.cars[car1] OR myObj["cars"]["car2"];
 
+## Object.defineProperty() :-
+```
+// Define object
+const obj = {counter : 0};
+
+// Define setters and getters
+Object.defineProperty(obj, "reset", {
+  get : function () {this.counter = 0;}
+});
+Object.defineProperty(obj, "increment", {
+  get : function () {this.counter++;}
+});
+Object.defineProperty(obj, "decrement", {
+  get : function () {this.counter--;}
+});
+Object.defineProperty(obj, "add", {
+  set : function (value) {this.counter += value;}
+});
+Object.defineProperty(obj, "subtract", {
+  set : function (value) {this.counter -= value;}
+});
+
+// Play with the counter:
+obj.reset;
+obj.add = 5;
+obj.subtract = 1;
+obj.increment;
+obj.decrement;
+```
+
+## Prototype Inheritance :-
+* All JavaScript objects inherit properties and methods from a prototype:
+* Date objects inherit from Date.prototype
+* Array objects inherit from Array.prototype
+* Person objects inherit from Person.prototype
+* The Object.prototype is on the top of the prototype inheritance chain: Date objects, Array objects, and Person objects inherit from Object.prototype.
+* The JavaScript prototype property allows you to add new properties to object constructors:
+```
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.nationality = "English";
+```
 
 # Function
 * A function is a group of statements that perform specific tasks and can be kept and maintained separately from main program. Functions provide a way to create reusable code packages that are more portable and easier to debug.
@@ -515,6 +587,27 @@ functionName(); <-- Calling a function
 * Local Variable --> It works only inside the function.
 # Function hoisting
 * The function hoisting is a mechanism that the JavaScript engine physically moves function declarations to the top of the code before executing them.
+
+## Self-Invoking Functions :-
+Function expressions will execute automatically if the expression is followed by ().
+```
+(function () {
+  let x = "Hello!!";  // I will invoke myself
+})();
+```
+
+## Function Rest Parameter :-
+The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:
+```
+function sum(...args) {
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+```
+
 
 
 
