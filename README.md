@@ -370,41 +370,6 @@ Error Name	                      Description
   TypeError	                     A type error has occurred
   URIError	                     An error in encodeURI() has occurred
 ```
-
-# Explicit Function Binding :-
-The call() and apply() methods are predefined JavaScript methods. They can both be used to call an object method with another object as argument.
-```
-const person1 = {
-  fullName: function() {
-    return this.firstName + " " + this.lastName;
-  }
-}
-
-const person2 = {
-  firstName:"John",
-  lastName: "Doe",
-}
-
-// Return "John Doe":
-person1.fullName.call(person2);
-```
-```
-const person = {
-  firstName:"John",
-  lastName: "Doe",
-  fullName: function () {
-    return this.firstName + " " + this.lastName;
-  }
-}
-
-const member = {
-  firstName:"Hege",
-  lastName: "Nilsen",
-}
-
-let fullName = person.fullName.bind(member);
-```
-
 ## Arrow Function :-
 <b>Syntax :- </b> let myFunc(a, b) => a*b;
 
@@ -484,7 +449,6 @@ const obj = JSON.parse(text);
 * Finally, use the new JavaScript object in your page:
 ```
 <p id="demo"></p>
-
 <script>
 document.getElementById("demo").innerHTML =
 obj.employees[1].firstName + " " + obj.employees[1].lastName;
@@ -608,7 +572,148 @@ function sum(...args) {
 let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
 ```
 
+## The JavaScript call() Method :-
+* The call() method is a predefined JavaScript method.
+* It can be used to call a method with an owner object as an argument.
+```
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+const person2 = {
+  firstName:"Mary",
+  lastName: "Doe"
+}
 
+// This will return "John Doe":
+person.fullName.call(person1);
+```
+
+## The JavaScript apply() Method :-
+* The apply() method is similar to the call() method.
+* In this example the fullName method of person is applied on person1:
+```
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person1 = {
+  firstName: "Mary",
+  lastName: "Doe"
+}
+
+// This will return "Mary Doe":
+person.fullName.apply(person1);
+```
+
+## The Difference Between call() and apply() :-
+* The call() method takes arguments separately whereas The apply() method takes arguments as an array.
+* <b> The apply() Method with Arguments :- </b>
+```
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+person.fullName.apply(person1, ["Oslo", "Norway"]);
+```
+* Compared with the call() method: 
+```
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+person.fullName.call(person1, "Oslo", "Norway");
+```
+
+## JavaScript Function bind() :-
+* With the bind() method, an object can borrow a method from another object.
+```
+const person ={
+  fName : "Sneha",
+  lName : "Varshney",
+  fullName : function(){
+    return this.fName + " " + this.lName;
+  }
+}
+const member = {
+  fName : "Sanaya",
+  lName : "Gupta",
+}
+let fullName = person.fullName.bind(member);
+```
+
+# Class Inheritance 
+* To create a class inheritance, use the extends keyword.
+* The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+* A class created with a class inheritance inherits all the methods from another class:
+```
+class Car{
+  constructor(brand){
+    this.carName = brand;
+  }
+  present(){
+    return 'I have a' + this.carName;
+  }
+}
+class Model extends Car{
+  constructor(brand, model){
+    super(brand);
+    this.model = model;
+  }
+  show(){
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+let myCar = new Model("Ford", "Mustang");
+document.getElementById("demo").inneHTML = myCar.show();
+```
+
+# Static Methods
+* Static class methods are defined on the class itself.
+* You cannot call a static method on an object, only on an object class.
+```
+class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+let myCar = new Car("Ford");
+
+// You can call 'hello()' on the Car Class:
+document.getElementById("demo").innerHTML = Car.hello();
+
+// But NOT on a Car Object:
+// document.getElementById("demo").innerHTML = myCar.hello();
+// this will raise an error.
+
+//If you want to use the myCar object inside the static method, you can send it as a parameter:
+//document.getElementById("demo").innerHTML = Car.hello(myCar);
+```
 
 
 # DOM - Document Object Model
