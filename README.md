@@ -696,6 +696,87 @@ document.getElementById("demo").innerHTML = Car.hello();
 //document.getElementById("demo").innerHTML = Car.hello(myCar);
 ```
 
+# Waiting for a Timeout 
+When using the JavaScript function setTimeout(), you can specify a callback function to be executed on time-out:
+```
+setTimeout(myFunc, 3000);
+function myFunc(){
+  document.getElementById("demo").innerHTML = "Say Hello";
+}
+```
+
+# Waiting for Intervals:
+When using the JavaScript function setInterval(), you can specify a callback function to be executed for each interval:
+```
+setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  document.getElementById("demo").innerHTML=
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+}
+```
+
+# Promise Object
+* A JavaScript Promise object contains both the producing code and calls to the consuming code.
+* <b>Syntax :- </b>
+```
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
+```
+```
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = 0;
+
+// The producing code (this may take some time)
+
+  if (x == 0) {
+    myResolve("OK");
+  } else {
+    myReject("Error");
+  }
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+```
+# Async 
+* The keyword async before a function makes the function return a promise:
+```
+async function myFunction() {
+  return "Hello";
+}
+myFunction().then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+```
+# Await
+* The await keyword can only be used inside an async function.
+* The await keyword makes the function pause the execution and wait for a resolved promise before it continues: <br>
+let value = await promise;
+```
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+```
+
+
 
 # DOM - Document Object Model
             document
