@@ -777,7 +777,6 @@ myDisplay();
 ```
 
 
-
 # DOM - Document Object Model
             document
                 |
