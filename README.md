@@ -777,7 +777,6 @@ async function myDisplay() {
 myDisplay();
 ```
 
-
 # DOM - Document Object Model
             document
                 |
