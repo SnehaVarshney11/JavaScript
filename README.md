@@ -718,7 +718,6 @@ function myFunction() {
   d.getSeconds();
 }
 ```
-
 # Promise Object
 * A JavaScript Promise object contains both the producing code and calls to the consuming code.
 * <b>Syntax :- </b>
