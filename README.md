@@ -750,7 +750,6 @@ myPromise.then(
   function(error) {myDisplayer(error);}
 );
 ```
-
 # Async 
 * The keyword async before a function makes the function return a promise:
 ```
