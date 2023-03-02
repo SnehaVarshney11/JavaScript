@@ -643,7 +643,6 @@ const member = {
 }
 let fullName = person.fullName.bind(member);
 ```
-
 # Class Inheritance 
 * To create a class inheritance, use the extends keyword.
 * The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
