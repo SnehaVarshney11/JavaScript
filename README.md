@@ -703,7 +703,6 @@ function myFunc(){
   document.getElementById("demo").innerHTML = "Say Hello";
 }
 ```
-
 # Waiting for Intervals:
 When using the JavaScript function setInterval(), you can specify a callback function to be executed for each interval:
 ```
