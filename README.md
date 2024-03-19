@@ -776,7 +776,11 @@ async function myDisplay() {
 myDisplay();
 ```
 
-# DOM - Document Object Model
+# HTML DOM - Document Object Model
+When a web page is loaded, the browser creates DOM. <br>
+HTML DOM is a standard for how to get, change. add or delete HTML elements. <br>
+The HTML DOM model is constructed as a tree of objects- <br>
+
             document
                 |
             root (html)
@@ -790,6 +794,14 @@ myDisplay();
                           Text : 'About Us'  attribute : 'id'
                                   |                 |
                           attribute : 'class'   attribute : 'class'
+
+* With the object model, JS gets all the power it needs to create dynamic HTML:  
+1. JS can change all the Html elements, attributes in the page.
+2. JS can change all the CSS Style in the page.
+3. JS can remove existing HTML elements and attributes.
+4. JS can add new HTML elements and attributes. 
+5. JS can create new HTML events in the page. 
+<br>
               
 * How to target DOM Object -> By ID, By Class Name, By Tag Name
 * <b>DOM Targeting Model</b> --> document, document.all, document.documentElement, document.head, document.title, document.body, document.images, document.anchors, document.links, document.forms, document.doctype, document.URL, document.baseURI, document.domain, getElementById(), getElementsByClassName(), getElementsByTagName()
@@ -809,4 +821,91 @@ element.removeEventListner(eventName, functionName);
 * <b><u>classList Methods: </u></b>
 1) add(class1, class2, ....),  2) remove(class1, class2, ...),  3) toogle(class), 4) contains(class), 5) item(index), 6) Length  
 * <b><u>Traversal Methods: </u></b>
-parentNode, parentElement, children, childNodes, firstChild, firstElementChild, lastChild, lastElementChild, nextElementSibling, nextSibling, previousElementSibling, previousSibling
+parentNode, parentElement, children, childNodes, firstChild, firstElementChild, lastChild, lastElementChild, nextElementSibling, nextSibling, previousElementSibling, previousSibling 
+
+## HTML DOM Document Object
+1. Finding HTML Elements
+<table border="1">
+  <tr>
+    <td>document.getElementById(id)</td>
+    <td>Find an element by element id </td>
+  </tr>
+  <tr>
+    <td>document.getElementsByTagName(name)	</td>
+    <td>Find elements by tag name </td>
+  </tr>
+  <tr>
+    <td>document.getElementsByClassName(name)	</td>
+    <td>Find elements by class name </td>
+  </tr>
+</table>
+
+2. Changing HTML Elements
+<table border="1">
+  <tr>
+    <td>element.innerHTML =  new html content</td>
+    <td>Change the inner HTML of an element</td>
+  </tr>
+  <tr>
+    <td>element.attribute = new value	</td>
+    <td>Change the attribute value of an HTML element </td>
+  </tr>
+  <tr>
+    <td>element.style.property = new style</td>
+    <td>Change the style of an HTML element</td>
+  </tr>
+  <tr>
+    <td>element.setAttribute(attribute, value)	</td>
+    <td>Change the attribute value of an HTML element</td>
+  </tr>
+</table>
+
+3. Adding and Deleting HTML Elements
+<table border="1">
+  <tr>
+    <td>document.createElement(element)	</td>
+    <td>Create an HTML element</td>
+  </tr>
+  <tr>
+    <td>document.removeChild(element)	</td>
+    <td>Remove an HTML element</td>
+  </tr>
+  <tr>
+    <td>document.appendChild(element)	</td>
+    <td>Add an HTML element</td>
+  </tr>
+  <tr>
+    <td>document.replaceChild(new, old)	</td>
+    <td>Replace an HTML element</td>
+  </tr>
+  <tr>
+    <td>document.write(text)	</td>
+    <td>Write into the HTML output stream</td>
+  </tr>
+</table>
+
+3. Finding HTML Objects
+<table border="1">
+  <tr>
+    <th>Property</th>
+    <th>Discription</th>
+    <th>DOM</th>
+  </tr>
+  <tr>
+    <td>document.removeChild(element)	</td>
+    <td>Remove an HTML element</td>
+  </tr>
+  <tr>
+    <td>document.appendChild(element)	</td>
+    <td>Add an HTML element</td>
+  </tr>
+  <tr>
+    <td>document.replaceChild(new, old)	</td>
+    <td>Replace an HTML element</td>
+  </tr>
+  <tr>
+    <td>document.write(text)	</td>
+    <td>Write into the HTML output stream</td>
+  </tr>
+</table>
+  
