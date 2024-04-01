@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Numeric Value</title>
+</head>
+<body>
+    <h1>Enter any value between 1 to 10</h1>
+    <input id="input">
+    <button type="button" onclick="validate()">Submit</button>
+    <p id="number"></p>
+
+    <script>
+        function validate() {
+            let num = document.getElementById('input').value;
+            let text;
+
+            if(isNaN(num) || num < 1 || num > 10) {
+                text = "Input is invalid";
+            } else {
+                text = "Input OK";
+            }
+            document.getElementById("number").innerHTML = text;
+        
+        }
+    </script>
+</body>
+</html>
