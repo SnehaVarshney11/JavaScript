@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Navigation Example</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <button id="addButton">Add Item</button>
+    </div>
+
+    <script>
+        // Accessing elements
+        const container = document.getElementById('container');
+        const addButton = document.getElementById('addButton');
+
+        // Event handling
+        addButton.addEventListener('click', function() {
+            const newItem = document.createElement('li');
+            newItem.textContent = 'New Item';
+            container.querySelector('ul').appendChild(newItem);
+        });
+
+        // Traversing the DOM tree
+        const firstItem = container.querySelector('ul').firstElementChild;
+        const lastItem = container.querySelector('ul').lastElementChild;
+
+        console.log('First Item:', firstItem.textContent);
+        console.log('Last Item:', lastItem.textContent);
+    </script>
+</body>
+</html>
