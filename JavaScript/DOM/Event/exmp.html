@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">Click Me</div>
+
+    <script>
+        const box = document.getElementById("box");
+
+        // MOUSE EVENTS
+        box.addEventListener('click', function() {
+            this.textContent = 'Clicked!';
+        })
+        box.addEventListener('dblclick', function() {
+            this.textContent = 'Double Clicked!';
+        })
+        box.addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'red';
+        })
+        box.addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'pink';
+        })
+
+    </script>
+</body>
+</html>
