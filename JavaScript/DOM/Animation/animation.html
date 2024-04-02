@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Using DOM</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <br>
+    <button onclick="animateBox()">Animate</button>
+
+    <script>
+        function animateBox() {
+            var box = document.getElementById("box");
+            var currWidth = box.offsetWidth;
+            var newWidth = currWidth + 50;
+
+            var currHeight = box.offsetHeight;
+            var newHeight = currHeight + 50;
+
+            box.style.width = newWidth + 'px';
+            box.style.height = newHeight + 'px';
+        }
+    </script>
+</body>
+</html>
