@@ -1127,3 +1127,50 @@ element.removeEventListener("mousemove", myFunction);
 In Bubbling - the inner most element's event is handled first and then outer. Example- If there is a &lt;p&gt; inside &lt;div&gt; then &lt;p&gt will click first then &lt;div&gt;
 
 In Capturing - the outer most element's event is handled first and then inner. Example- If there is a &lt;p&gt; inside &lt;div&gt; then &lt;div&gt will click first then &lt;p&gt;
+
+## Navigation
+* DOM navigation refers to the process of traversing and manipulating the structure of the DOM in HTML documents using JavaScript. 
+* The DOM represents the hierarchical structure of HTML elements on a web page, where each element is a node in the tree-like structure.
+* DOM navigation involves moving between different nodes in the DOM tree, accessing their properties, modifying their content, adding or removing elements, and performing various operations based on the structure of the DOM.
+* Here are some common tasks involved in DOM navigation: 
+1. <b>Accessing Elements:</b> You can use methods like document.getElementById(), document.getElementsByClassName(), document.getElementsByTagName(), and document.querySelector() to access specific elements in the DOM based on their IDs, classes, tags, or CSS selectors.
+2. <b>Traversing the DOM Tree:</b> You can navigate between parent, child, and sibling nodes in the DOM tree using properties like parentNode, childNodes, firstChild, lastChild, nextSibling, and previousSibling.
+3. <b>Manipulating Elements:</b> Once you've accessed an element, you can modify its properties, such as textContent, innerHTML, classList, style, etc., to change its content, attributes, styles, and classes.
+4. <b>Creating and Removing Elements:</b> You can dynamically create new elements using document.createElement() and append them to the DOM tree using methods like appendChild(), insertBefore(), etc. Similarly, you can remove elements using removeChild().
+5. <b>Event Handling:</b> You can attach event handlers to DOM elements using methods like addEventListener() to listen for user interactions (clicks, key presses, etc.) and perform actions based on those events.
+
+## Collections
+* The getElementsByTagName() method returns an HTMLCollection object.
+* It may look like array but it's not.
+* However, you cannot use array methods like valueOf(), pop(), push(), or join() on an HTMLCollection.
+
+## Node Lists
+* A NodeList object is a list (collection) of nodes extracted from a document.
+* A NodeList object is almost the same as an HTMLCollection object.
+* getElementsByClassName() may return either an HTMLCollection or a NodeList depending on the browser version.
+* The childNodes property always returns a NodeList containing all child nodes.
+* querySelectorAll() consistently returns a NodeList across most browsers, allowing for selection of multiple elements using CSS selectors.
+
+### Difference Between Collections and Node Lists
+<table border="1">
+  <tr>
+    <th>Collections</th>
+    <th>Node Lists</th>
+  </tr>
+  <tr>
+    <td>Collections of document elements</td>
+    <td>Collections of document nodes</td>
+  </tr>
+  <tr>
+    <td>Can be accessed by their name, id or index no.</td>
+    <td>Can be accessed by their index no.</td>
+  </tr>
+  <tr>
+    <td>An HTMLCollection is always a live collection. Example: If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change.</td>
+    <td>A NodeList is most often a static collection. Example: If you add a <li> element to a list in the DOM, the list in NodeList will not change.</td>
+  </tr>
+  <tr>
+    <td>The getElementsByClassName() and getElementsByTagName() methods return a live HTMLCollection.</td>
+    <td>The querySelectorAll() method returns a static NodeList.</td>
+  </tr>
+</table>
