@@ -884,28 +884,222 @@ parentNode, parentElement, children, childNodes, firstChild, firstElementChild, 
   </tr>
 </table>
 
-3. Finding HTML Objects
+## Finding HTML Elements
+1. By Id -> <br>
+document.getElementById("Id");
+
+2. By Tag Name -> <br>
+document.getElementByTagName("p");
+
+```
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+This example finds the element with id="main", and then finds all <p> elements inside "main"
+```
+
+3. By Class Name -> <br>
+document.getElementByClassName("class");
+
+4. By CSS Selector -> <br>
+document.querySelectorAll("p.intro"); <br>
+will return a list of all &lt;p&gt; elements with class="intro".
+
+## Changing HTML Content 
+
+### Change HTML Element -
+The easiest way to modify the content of an HTML element is by using <b>innerHTML</b> property.
+```
+document.getElementById(id).innerHTML = new HTML
+```
+
+### Change the Value of HTML Attribute
+To modify the attribute use this syntax -
+```
+document.getElementById(id).attribute = new value
+```
+
+## FORMS
+HTML Form validation can be done by JavaScript.
+
+### HTML Constraint Validation
+* HTML5 introduced a new HTML validation concept called constraint validation.
+* HTML constraint validation is based on:
+1. Constraint validation HTML Input Attributes
+2. Constraint validation CSS Pseudo Selectors
+3. Constraint validation DOM Properties and Methods
+
+A. Constraint validation HTML Input Attributes
 <table border="1">
   <tr>
-    <th>Property</th>
-    <th>Discription</th>
-    <th>DOM</th>
+    <th>Attribute</th>
+    <th>Description</th>
   </tr>
   <tr>
-    <td>document.removeChild(element)	</td>
-    <td>Remove an HTML element</td>
+    <td>disabled</td>
+    <td>Specifies that the input element should be disabled</td>
   </tr>
   <tr>
-    <td>document.appendChild(element)	</td>
-    <td>Add an HTML element</td>
+    <td>max</td>
+    <td>Specifies the maximum value of an input element</td>
   </tr>
   <tr>
-    <td>document.replaceChild(new, old)	</td>
-    <td>Replace an HTML element</td>
+    <td>min</td>
+    <td>Specifies the minimum value of an input element</td>
   </tr>
   <tr>
-    <td>document.write(text)	</td>
-    <td>Write into the HTML output stream</td>
+    <td>pattern</td>
+    <td>Specifies the value pattern of an input element</td>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>Specifies that the input field requires an element</td>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td>Specifies the type of an input element</td>
   </tr>
 </table>
-  
+
+B. Constraint validation CSS Pseudo Selectors
+<table border="1">
+  <tr>
+    <th>Selector</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>:disabled</td>
+    <td>Selects input elements with the "disabled" attribute specified</td>
+  </tr>
+  <tr>
+    <td>:invalid</td>
+    <td>Selects input elements with invalid values</td>
+  </tr>
+  <tr>
+    <td>:optional</td>
+    <td>Selects input elements with no "required" attribute specified</td>
+  </tr>
+  <tr>
+    <td>:required</td>
+    <td>Selects input elements with the "required" attribute specified</td>
+  </tr>
+  <tr>
+    <td>:valid</td>
+    <td>Selects input elements with valid values</td>
+  </tr>     
+</table>
+
+## Changing HTML Style
+* Use this syntax to change the style -
+```
+document.getElementById(id).style.property = new style
+```
+
+## DOM Animation
+* Animating element on a web page using javascript and CSS properties that manipulates the structure and style of the HTML elements.
+* This includes animations like changing element positions, sizes, color, opacity and more.\
+* We don't have to use @keyframes here for animation.
+
+## DOM Events 
+* These  are actions or occurrences that happen in the HTML document or within its elements, triggered by user interactions or system events.
+* Examples of DOM events include mouse clicks, key presses, form submissions, page load, and more.
+
+<table border="1">
+  <tr>
+    <th>Mouse Events</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>click</td>
+    <td>Triggered when the mouse button is clicked.</td>
+  </tr>
+  <tr>
+    <td>dblclick</td>
+    <td>Triggered when the mouse button is double-clicked.</td>
+  </tr>
+  <tr>
+    <td>mouseover</td>
+    <td>Triggered when the mouse pointer moves over an element.</td>
+  </tr>
+  <tr>
+    <td>mouseout</td>
+    <td>Triggered when the mouse pointer moves out of an element.</td>
+  </tr>
+  <tr>
+    <td>mousedown</td>
+    <td>Triggered when a mouse button is pressed down over an element.</td>
+  </tr>   
+  <tr>
+    <td>mouseup</td>
+    <td>Triggered when a mouse button is released over an element.</td>
+  </tr>  
+</table>
+
+<table border="1">
+  <tr>
+    <th>Keyboard Events</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>keydown</td>
+    <td>Triggered when a key is pressed down.</td>
+  </tr>
+  <tr>
+    <td>keyup</td>
+    <td>Triggered when a key is released.</td>
+  </tr>
+  <tr>
+    <td>keypress</td>
+    <td>Triggered when a key is pressed and released.</td>
+  </tr>
+</table>
+
+<table border="1">
+  <tr>
+    <th>Form Events</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>submit</td>
+    <td>Triggered when a form is submitted.</td>
+  </tr>
+  <tr>
+    <td>input</td>
+    <td>Triggered when the value of an input field changes.</td>
+  </tr>
+  <tr>
+    <td>change</td>
+    <td>Triggered when the value of a form element changes and loses focus.</td>
+  </tr>
+  <tr>
+    <td>focus</td>
+    <td>Triggered when an element gains focus.</td>
+  </tr>
+  <tr>
+    <td>blur</td>
+    <td>Triggered when an element loses focus.</td>
+  </tr>     
+</table>
+
+<table border="1">
+  <tr>
+    <th>Window Events</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>load</td>
+    <td>Triggered when the window and its content finish loading.</td>
+  </tr>
+  <tr>
+    <td>resize</td>
+    <td>Triggered when the window is resized.</td>
+  </tr>
+  <tr>
+    <td>scroll</td>
+    <td>Triggered when the document is scrolled.</td>
+  </tr>
+  <tr>
+    <td>unload</td>
+    <td>Triggered when the window is being unloaded (e.g., when navigating away from the page).</td>
+  </tr>
+</table>
