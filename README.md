@@ -1103,3 +1103,27 @@ document.getElementById(id).style.property = new style
     <td>Triggered when the window is being unloaded (e.g., when navigating away from the page).</td>
   </tr>
 </table>
+
+## Event Listener
+
+### The addEventListener() method
+Add an event listener that fires when a user clicks a button:
+```
+document.getElementById("myBtn").addEventListener("click", displayDate);
+```
+
+### The removeEventListener() method
+The removeEventListener() method removes event handlers that have been attached with the addEventListener() method:
+```
+element.removeEventListener("mousemove", myFunction);
+```
+
+## Event Bubbling or Event Capturing?
+* <b>Event Propagation : </b> It is a way of defining the element order when an event occurs. <br>
+* There are two ways of defining the event propagation- 
+1. Event Bubbling
+2. Event Capturing
+
+In Bubbling - the inner most element's event is handled first and then outer. Example- If there is a &lt;p&gt; inside &lt;div&gt; then &lt;p&gt will click first then &lt;div&gt;
+
+In Capturing - the outer most element's event is handled first and then inner. Example- If there is a &lt;p&gt; inside &lt;div&gt; then &lt;div&gt will click first then &lt;p&gt;
