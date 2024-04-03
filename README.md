@@ -1174,3 +1174,71 @@ In Capturing - the outer most element's event is handled first and then inner. E
     <td>The querySelectorAll() method returns a static NodeList.</td>
   </tr>
 </table>
+
+### Timing Events -
+* The window object allows execution of code at specified time intervals.
+* These time intervals are called timing events.
+* The two key methods to use with JavaScript are:
+1. <u>setTimeout(function, milliseconds) </u> -> 
+Executes a function, after waiting a specified number of milliseconds.
+2. <u>setInterval(function, milliseconds)</u> ->
+Same as setTimeout(), but repeats the execution of the function continuously.
+
+## The Browser Object Model (BOM)
+The Browser Object Model (BOM) represents a collection of objects provided by the browser environment, which can be accessed and manipulated using JavaScript. Unlike the DOM, which deals with the elements of a web page, the BOM focuses on the browser window and its components. <br><br>
+<b>BOM includes objects such as :- </b><br><br>
+<b><u>Window -</u></b>
+* The window object represents the browser window and is the top-level object in the BOM hierarchy.
+* It provides properties and methods to interact with the browser window, such as resizing the window, opening/closing windows, controlling navigation, handling events, and accessing browser-related information like the URL and history.
+* It is supported by all the browsers. 
+* Global variables are properties of the window object.
+  ```
+  var globalVariable = 'Hello';
+  console.log(window.globalVariable); 
+  // Output: 'Hello'
+  ```
+* Global functions are methods of the window object.
+* Even the document object (of the HTML DOM) is a property of the window object.
+  ```
+  window.document.getElementById("header"); // Same as document.getElementById("header");
+  ```
+Methods -
+1. Window Size -  There are two prop - window.innerHeight, window.innerWidth (in px)
+2. window.open()
+3. window.close()
+4. window.moveTo()
+5. window.resizeTo()
+
+<b><u>Screen -</u></b><br>
+&nbsp;&nbsp;&nbsp; The window.screen object contains information about the user's screen. <br>
+Properties-
+1. screen.width -> returns then total width of the visitor's screen in pixels.
+2. screen.height -> returns the height of the visitor's screen in pixels.
+3. screen.availWidth -> returns the available width of the visitor's screen (total width - area covered by system element)
+4. screen.availHeight -> returns the available height of the visitor's screen (total width - area covered by system element)
+5. screen.colorDepth -> returns the number of bits used to display one color.
+6. screen.pixelDepth -> returns the number of bits used to represent the color of each pixel on the screen. Higher color depths allow for a wider range of colors and better color accuracy.
+
+<b><u>Location -</u></b><br>
+&nbsp;&nbsp;&nbsp; The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page. <br>
+Properties -
+1. window.location.href -> returns the entire URL of the current document, including the protocol, domain, path, query parameters, and fragment identifier.
+2. window.location.protocol -> returns the protocol (e.g., "http:", "https:") of the current URL.
+3. window.location.hostname -> returns the hostname and port number of the current URL.
+4. window.location.pathname -> returns the path and filename of the current URL.
+
+### Popup Alert -
+1. <u>Alert Box </u> -> An alert box is often used if you want to make sure information comes through to the user.<br>
+<b>Syntax - </b> window.alert("text");
+
+2. <u>Confirm Box</u> -> A confirm box is often used if you want the user to verify or accept something. <br>
+<b>Syntax - </b> window.confirm("text");
+
+3. <u>Prompt Box </u> -> A prompt box is often used if you want the user to input a value before entering a page. <br>
+<b>Syntax - </b> window.prompt("sometext","defaultText");
+
+## Cookies -
+* Cookies are data, stored in small text files, on your computer.
+* When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user. Cookies were invented to solve the problem "how to remember information about the user":
+* When a user visits a web page, his/her name can be stored in a cookie as a name-value pair. Next time the user visits the page, the cookie "remembers" his/her name.
+* JavaScript can create, read, and delete cookies with the document.cookie property.
