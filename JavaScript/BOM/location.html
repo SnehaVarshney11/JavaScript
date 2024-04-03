@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>window.location Demo</title>
+</head>
+<body>
+  <h1>window.location Demo</h1>
+
+  <script>
+    // Accessing properties of window.location
+    console.log('Full URL:', window.location.href);
+    console.log('Protocol:', window.location.protocol);
+    console.log('Hostname:', window.location.hostname);
+    console.log('Port:', window.location.port);
+    console.log('Pathname:', window.location.pathname);
+    console.log('Query String:', window.location.search);
+    console.log('Hash:', window.location.hash);
+
+    // Reloading the page after 3 seconds
+    setTimeout(() => {
+      window.location.reload(); // Reload the page
+    }, 3000);
+
+    // Redirecting to a new page after 5 seconds
+    setTimeout(() => {
+      window.location.replace('https://www.amazon.in/'); // Redirect to a new page
+    }, 5000);
+  </script>
+</body>
+</html>
