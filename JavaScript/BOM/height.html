@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Screen Height Test</title>
+</head>
+<body>
+  <h1>Screen Height Test</h1>
+  <p>Total Screen Height: <span id="totalHeight"></span> pixels</p>
+  <p>Available Screen Height: <span id="availHeight"></span> pixels</p>
+
+  <script>
+    // Display total screen Height
+    document.getElementById('totalHeight').textContent = screen.height;
+
+    // Display available screen Height
+    document.getElementById('availHeight').textContent = screen.availHeight;
+  </script>
+</body>
+</html>
