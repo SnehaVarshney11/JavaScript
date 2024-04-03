@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>setTimeout and setInterval Examples</title>
+</head>
+<body>
+  <h1>setTimeout and setInterval Examples</h1>
+
+  <p>Check the console for output.</p>
+
+  <script>
+    // Example using setTimeout
+    setTimeout(() => {
+      console.log('This message will appear after 3 seconds using setTimeout.');
+    }, 3000);
+
+    // Example using setInterval
+    const intervalId = setInterval(() => {
+      console.log('This message will appear every 2 seconds using setInterval.');
+    }, 2000);
+
+    // Stop the interval after 10 seconds (10000 milliseconds)
+    setTimeout(() => {
+      clearInterval(intervalId); // Stop the interval
+      console.log('Interval stopped after 10 seconds.');
+    }, 10000);
+  </script>
+</body>
+</html>
