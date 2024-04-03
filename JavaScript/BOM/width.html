@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Screen Width Test</title>
+</head>
+<body>
+  <h1>Screen Width Test</h1>
+  <p>Total Screen Width: <span id="totalWidth"></span> pixels</p>
+  <p>Available Screen Width: <span id="availWidth"></span> pixels</p>
+
+  <script>
+    // Display total screen width
+    document.getElementById('totalWidth').textContent = screen.width;
+
+    // Display available screen width
+    document.getElementById('availWidth').textContent = screen.availWidth;
+  </script>
+</body>
+</html>
