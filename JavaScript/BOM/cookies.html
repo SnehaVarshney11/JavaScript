@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Cookies Example</title>
+</head>
+<body>
+  <h1>JavaScript Cookies Example</h1>
+
+  <button onclick="setCookie()">Set Cookie</button>
+  <button onclick="getCookie()">Get Cookie</button>
+  <button onclick="deleteCookie()">Delete Cookie</button>
+
+  <script>
+    // Function to set a cookie
+    function setCookie() {
+      const cookieName = 'username';
+      const cookieValue = 'John Doe';
+      const expirationDays = 7; // Cookie expiration in days
+
+      const date = new Date();
+      date.setTime(date.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
+      const expires = 'expires=' + date.toUTCString();
+
+      document.cookie = cookieName + '=' + cookieValue + ';' + expires + ';path=/';
+      console.log('Cookie set:', document.cookie);
+    }
+
+    // Function to get a cookie
+    function getCookie() {
+      const cookieName = 'username';
+      const cookies = document.cookie.split(';');
+
+      for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.startsWith(cookieName + '=')) {
+          console.log('Cookie found:', cookie.substring(cookieName.length + 1));
+          return cookie.substring(cookieName.length + 1);
+        }
+      }
+      console.log('Cookie not found.');
+      return null;
+    }
+
+    // Function to delete a cookie
+    function deleteCookie() {
+      const cookieName = 'username';
+      document.cookie = cookieName + '=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;';
+      console.log('Cookie deleted.');
+    }
+  </script>
+</body>
+</html>
