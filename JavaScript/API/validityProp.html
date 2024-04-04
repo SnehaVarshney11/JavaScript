@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validity Properties</title>
+</head>
+<body>
+    <input id="id1" type="number" max="100">
+    <button onclick="myFunction()">OK</button>
+
+    <p id="demo"></p>
+
+    <script>
+    function myFunction() {
+      let text = "Value OK";
+      if (document.getElementById("id1").validity.customError) {
+        text = "Value too large";
+      }else if (document.getElementById("id1").validity.rangeUnderflow) {
+        text = "Value too small";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+</script>
+</body>
+</html>
