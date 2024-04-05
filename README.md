@@ -1345,3 +1345,14 @@ There are 2 main types -
 * A web worker is a JavaScript running in the background, without affecting the performance of the page.
 * When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
 * A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+
+## AJAX 
+* Ajax (Asynchronous JavaScript and XML) is a technique used in web development to send and receive data from a web server asynchronously, meaning that it allows the browser to make requests to the server and handle responses without reloading the entire web page. This helps in creating more dynamic and interactive web applications.
+* We can read the data from a web server - after the page has loaded.
+* Updating the web page without reloading the page.
+* Send the data to web server in the background. 
+* It's not a programming language. 
+* AJAX -> XMLHttpRequest + JS and HTML DOM (to display user data)
+
+### How AJAX Works
+<img src="./JavaScript/AJAX/AJAX.png" alt="ajax">
