@@ -1242,3 +1242,106 @@ Properties -
 * When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user. Cookies were invented to solve the problem "how to remember information about the user":
 * When a user visits a web page, his/her name can be stored in a cookie as a name-value pair. Next time the user visits the page, the cookie "remembers" his/her name.
 * JavaScript can create, read, and delete cookies with the document.cookie property.
+
+## Web API
+* A Web API (Application Programming Interface) is a set of protocols and tools that allows different software applications to communicate and interact with each other over the internet. 
+* It defines the methods and rules for how software components should interact, exchange data, and perform operations. <br><br>
+There are 2 main types -
+  1. Server Side API 
+  2. Client Side API (Browser-Side)
+
+1. Server Side :- 
+* Server-side APIs are exposed by web servers or server-side applications to provide access to resources, data, and functionalities on the server.
+* A Server API can extend the functionality of a web server.
+* Common examples of server-side APIs include RESTful APIs, SOAP APIs, GraphQL APIs, database APIs, and server-side programming APIs (e.g., Node.js APIs).
+
+2. Client Side :- 
+* Client-side APIs are provided by web browsers to enable web developers to interact with and control the browser environment, user interface, and client-side functionalities.
+* They allow developers to manipulate the DOM (Document Object Model), handle user input, make HTTP requests, access device capabilities, store data locally, and perform various client-side tasks.
+* Common examples of client-side APIs include the DOM API, Fetch API, Geolocation API, Web Storage API, Canvas API, IndexedDB API, and more.
+
+## Validation API
+###  Constraint Validation DOM Methods
+<table border="1">
+  <tr>
+    <th>Properties</th>
+    <th>Discription</th>
+  </tr>
+  <tr>
+    <td>checkValidity()</td>
+    <td>Returns true if an input element contains valid data.</td>
+  </tr>
+  <tr>
+    <td>setCustomValidity()</td>
+    <td>Sets the validationMessage property of an input element.</td>
+  </tr>
+</table>
+
+### Constraint Validation DOM Properties
+<table border="1">
+  <tr>
+    <th>Properties</th>
+    <th>Discription</th>
+  </tr>
+  <tr>
+    <td>validity</td>
+    <td>Contains boolean properties related to the validity of an input element.</td>
+  </tr>
+  <tr>
+    <td>validationMessage</td>
+    <td>Contains the message a browser will display when the validity is false.</td>
+  </tr>
+  <tr>
+    <td>willValidate</td>
+    <td>Indicates if an input element will be validated.</td>
+  </tr>
+</table>
+
+### Validity Properties
+<table border="1">
+  <tr>
+    <th>Properties</th>
+    <th>Discription</th>
+  </tr>
+  <tr>
+    <td>customError</td>
+    <td>Set to true, if a custom validity message is set.</td>
+  </tr>
+  <tr>
+    <td>patternMismatch</td>
+    <td>Set to true, if an element's value does not match its pattern attribute.</td>
+  </tr>
+  <tr>
+    <td>rangeOverflow</td>
+    <td>Set to true, if an element's value is greater than its max attribute.</td>
+  </tr>
+  <tr>
+    <td>rangeUnderflow</td>
+    <td>Set to true, if an element's value is less than its min attribute.</td>
+  </tr>
+  <tr>
+    <td>stepMismatch</td>
+    <td>Set to true, if an element's value is invalid per its step attribute.</td>
+  </tr>
+  <tr>
+    <td>tooLong</td>
+    <td>Set to true, if an element's value exceeds its maxLength attribute.</td>
+  </tr>
+  <tr>
+    <td>typeMismatch</td>
+    <td>Set to true, if an element's value is invalid per its type attribute.</td>
+  </tr>
+  <tr>
+    <td>valueMissing</td>
+    <td>Set to true, if an element (with a required attribute) has no value.</td>
+  </tr>
+  <tr>
+    <td>valid</td>
+    <td>Set to true, if an element's value is valid.</td>
+  </tr>
+</table>
+
+## Web Worker API
+* A web worker is a JavaScript running in the background, without affecting the performance of the page.
+* When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
+* A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Worker API</title>
+</head>
+<body>
+  <h2>JavaScript Web Workers API</h2>
+  <p>Count numbers: <output id="result"></output></p>
+  <button onclick="startWorker()">Start Worker</button> 
+  <button onclick="stopWorker()">Stop Worker</button>
+
+  <script>
+    let w;
+
+    function startWorker() {
+      if(typeof(w) == "undefined") {
+        w = new Worker("demo-worker.js");
+      }
+      w.onmessage = function(event) {
+        document.getElementById("result").innerHTML = event.data;
+      };
+      w.onerror = function(event) {
+        console.error('Web Worker error:', event.message);
+      };
+    }
+
+    function stopWorker() { 
+      w.terminate();
+      w = undefined;
+    }
+  </script>
+</body>
+</html>
