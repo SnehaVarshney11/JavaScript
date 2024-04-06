@@ -1346,13 +1346,133 @@ There are 2 main types -
 * When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
 * A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
 
-## AJAX 
+# AJAX 
 * Ajax (Asynchronous JavaScript and XML) is a technique used in web development to send and receive data from a web server asynchronously, meaning that it allows the browser to make requests to the server and handle responses without reloading the entire web page. This helps in creating more dynamic and interactive web applications.
 * We can read the data from a web server - after the page has loaded.
 * Updating the web page without reloading the page.
 * Send the data to web server in the background. 
 * It's not a programming language. 
 * AJAX -> XMLHttpRequest + JS and HTML DOM (to display user data)
+* It can be used for interactive communication with an XML file.
 
 ### How AJAX Works
 <img src="./JavaScript/AJAX/AJAX.png" alt="ajax">
+
+## The XMLHttpRequest Object 
+* All modern browser supports this.
+* It can be used to exchanged data with a web server behind a scenes means it's possible to update the part of web page without reload the page. 
+
+### Create a XMLHttpRequest object
+Syntax - <br>
+variable = new XMLHttpRequest();
+
+### Define a callback function 
+The callback function should contain the code to execute the code when response body is ready. <br>
+Syntax - <br>
+xhttp.onload = function() {
+  // What to do when the response is ready
+}
+
+### Send a Request
+Can use open() and send() method. <br>
+Syntax - <br>
+xhttp.open("GET", "sample.txt");
+xhttp.send();
+
+### XMLHttpRequest Object Methods 
+<table border="1">
+  <tr>
+    <th>Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>new XMLHttpRequest()</td>
+    <td>Creates a new XMLHttpRequest object</td>
+  </tr>
+  <tr>
+    <td>abort()</td>
+    <td>Cancels the current request</td>
+  </tr>
+  <tr>
+    <td>getAllResponseHeaders()</td>
+    <td>Returns header information</td>
+  </tr>
+  <tr>
+    <td>getResponseHeader()</td>
+    <td>Returns specific header information</td>
+  </tr>
+  <tr>
+    <td>open(method, url, async, user, psw)</td>
+    <td>Specifies the request parameters:
+      <ul>
+        <li><b>method:</b> the request type (GET or POST)</li>
+        <li><b>url:</b> the file location</li>
+        <li><b>async:</b> true (asynchronous) or false (synchronous)</li>
+        <li><b>user:</b> optional user name</li>
+        <li><b>psw:</b> optional password</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>send()</td>
+    <td>Sends the request to the server (used for GET requests)</td>
+  </tr>
+  <tr>
+    <td>send(string)</td>
+    <td>Sends the request to the server (used for POST requests)</td>
+  </tr>
+  <tr>
+    <td>setRequestHeader()</td>
+    <td>Adds a label/value pair to the header to be sent</td>
+  </tr>
+</table>
+
+### XMLHttpRequest Object Properties
+<table border="1">
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>onload</td>
+    <td>Defines a function to be called when the request is received (loaded)</td>
+  </tr>
+  <tr>
+    <td>onreadystatechange</td>
+    <td>Defines a function to be called when the readyState property changes</td>
+  </tr>
+  <tr>
+    <td>readyState</td>
+    <td>Holds the status of the XMLHttpRequest:
+      <ul>
+        <li>0: request not initialized</li>
+        <li>1: server connection established</li>
+        <li>2: request received</li>
+        <li>3: processing request</li>
+        <li>4: request finished and response is ready</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>responseText</td>
+    <td>Returns the response data as a string</td>
+  </tr>
+  <tr>
+    <td>responseXML</td>
+    <td>Returns the response data as XML data</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>Returns the status-number of a request:
+      <ul>
+        <li>200: "OK"</li>
+        <li>403: "Forbidden"</li>
+        <li>404: "Not Found"</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>statusText</td>
+    <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+  </tr>
+</table>

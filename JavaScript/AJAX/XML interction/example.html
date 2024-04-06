@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX with XML</title>
+    <style>
+        table,th,td {
+          border : 1px solid black;
+          border-collapse: collapse;
+        }
+        th,td {
+          padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>The XMLHttpRequest Object With XML</h2>
+    
+    <button type="button" onclick="loadDoc()">Get my CD Collection</button>
+    <br><br>
+    <table id="tab"></table>
+
+    <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                myFunction(this);
+            }
+            xhttp.open("GET", "ex.xml");
+            xhttp.send();
+        }
+
+        function myFunction(xml) {
+            const xmlDoc = xml.responseXML;
+            const x = xmlDoc.getElementsByTagName("CD");
+
+            let table = "<tr><th>Country</th><th>Year</th></tr>";
+
+            for(let i=0; i<x.length; i++) {
+                table += "<tr><td>" + x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue + "</td><td>" +
+                            x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue + "</td></tr>";
+            }
+            document.getElementById("tab").innerHTML = table;
+        }
+    </script>
+</body>
+</html>
