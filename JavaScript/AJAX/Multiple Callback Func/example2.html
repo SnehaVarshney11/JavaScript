@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX with Text Data - Multiple Callback Functions</title>
+</head>
+<body>
+    <button type="button" onclick="loadText()">Load Text</button>
+    <div id="textOutput1"></div>
+    <div id="textOutput2"></div>
+
+    <script>
+        function loadText() {
+            const text1 = "Hello, this is text 1!";
+            const text2 = "This is text 2!";
+            loadContent(text1, displayText1);
+            loadTextContent(text2, displayText2);
+        }
+
+        function loadContent(text, callback) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                callback(this.responseText);
+            }
+            xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts/1");
+            xhttp.setRequestHeader("Content-Type", "text/plain");
+            xhttp.send();
+        }
+
+        function loadTextContent(text, callback) {
+            callback(text);
+        }
+
+        function displayText1(responseText) {
+            const textOutput1 = document.getElementById("textOutput1");
+            textOutput1.innerHTML = responseText;
+        }
+
+        function displayText2(responseText) {
+            const textOutput2 = document.getElementById("textOutput2");
+            textOutput2.textContent = responseText;
+        }
+    </script>
+</body>
+</html>

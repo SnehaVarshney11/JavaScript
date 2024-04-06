@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Callback Function</title>
+</head>
+<body>
+    <button type="button" onclick="loadDoc()">Click Me</button>
+
+    <script>
+        function loadDoc() {
+            loadDocByUrl("https://jsonplaceholder.typicode.com/posts/1", myFunc1);
+            loadDocByUrl("https://jsonplaceholder.typicode.com/posts/2", myFunc2);
+        }
+
+        function loadDocByUrl(url, callback) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                callback(this);
+            }
+            xhttp.open("GET", url);
+            xhttp.send();
+        }
+
+        function myFunc1(xhttp) {
+            console.log("Response from URL 1: ", xhttp.responseText);
+        }
+
+        function myFunc2(xhttp) {
+            console.log("Response from URL 2: ", xhttp.responseText);
+        }
+
+    </script>
+    
+    
+</body>
+</html>
