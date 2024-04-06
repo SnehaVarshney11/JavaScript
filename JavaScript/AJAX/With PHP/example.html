@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX With PHP</title>
+    <style>
+        th,td {
+          padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>The XMLHttpRequest Object</h2>
+
+    <form action="">
+        <select name="customer" onchange="showCustomer(this)">
+            <option value="">Select a customer:</option>
+            <option value="ALFKI">Alfreds Futterkiste</option>
+            <option value="NORTS ">North/South</option>
+            <option value="WOLZA">Wolski Zajazd</option>
+        </select>
+    </form>
+    <br>
+    <div id="txtHint">Customer info will be listed here...</div>
+
+    <script>
+        function showCustomer(str) {
+            if(str == "") {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            }
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "data.php?q="+str);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
