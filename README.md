@@ -1354,6 +1354,7 @@ There are 2 main types -
 * It's not a programming language. 
 * AJAX -> XMLHttpRequest + JS and HTML DOM (to display user data)
 * It can be used for interactive communication with an XML file.
+* AJAX can be used for interactive communication with a database.
 
 ### How AJAX Works
 <img src="./JavaScript/AJAX/AJAX.png" alt="ajax">
@@ -1476,3 +1477,51 @@ xhttp.send();
     <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
   </tr>
 </table>
+
+# JS JSON
+* JSON stands for JavaScript Object Notation. JSON is a text format for storing and transporting data.
+* Common use of JSON is to exchange the data to/from a web server.
+* If you parse the JSON String with a JS Program, you can access the data as an object. 
+* JSON has built in function for converting JSON String into JS objects -> <b> JSON.parse() </b>
+* JS also has built in function for converting JS object into JSON String -> <b> JSON.stringify() </b>
+* <b> Valid Data Types :- </b> String, Number, Boolean, Object, Array, null.
+* <b> InValid Data Types :- </b> Function, Date, Undefined.
+
+## JSON Parse
+
+* Date Objects are not allowed in JSON. If we need to include a date, write it as String. 
+  ```
+  const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+  const obj = JSON.parse(text);
+  obj.birth = new Date(obj.birth);
+
+  document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+  ```
+* We can also use the second parameter, of the JSON.parse() function, called reviver. The reviver parameter is a function that checks each property, before returning the value.
+  ```
+  const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+  const obj = JSON.parse(text, function (key, value) {
+    if (key == "birth") {
+      return new Date(value);
+    } else {
+      return value;
+    }
+  });
+
+  document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+  ```
+* Functions are not allowed in JSON, so we need to write it as String.
+  ```
+  const text = '{"name":"John", "age":"function () {return 30;}", "city":"New York"}';
+  const obj = JSON.parse(text);
+  obj.age = eval("(" + obj.age + ")");
+
+  document.getElementById("demo").innerHTML = obj.name + ", " + obj.age();
+  ```
+* You should avoid using functions in JSON, the functions will lose their scope, and you would have to use eval() to convert them back into functions.
+
+## JSON JSONP
+* JSONP stands for JSON with Padding.
+* Requesting a file from another domain can cause a problem due to cross-domain policy. Requesting an external script from another domain doesn't have this problem.
+* JSONP uses this adv, and request a file using script tag instead of XMLHttpRequest Object. 
+
