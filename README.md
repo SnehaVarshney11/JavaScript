@@ -1525,3 +1525,100 @@ xhttp.send();
 * Requesting a file from another domain can cause a problem due to cross-domain policy. Requesting an external script from another domain doesn't have this problem.
 * JSONP uses this adv, and request a file using script tag instead of XMLHttpRequest Object. 
 
+# JQuery
+* JQuery was created in 2006 by John Resig. It's a most popular JS Library.
+* It handles the browser incompatibilities and to simplify HTML DOM, Event Handling, Animations and Ajax.
+
+## JS VS JQuery
+<table border="1">
+  <tr>
+    <th>S.No.</th>
+    <th>JavaScript</th>
+    <th>jQuery</th>
+  </tr>
+  <tr>
+    <td>Finding Element</td>
+    <td>
+      <strong>1. By ID:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      document.getElementById("id01"); <br><br>
+      <strong>2. By Tag Name:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      document.getElementsByTagName("p"); <br><br>
+      <strong>3. By Class Name:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      document.getElementsByClassName("intro"); <br><br>
+      <strong>4. By CSS Selector:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      document.querySelectorAll("p.intro");
+    </td>
+    <td>
+      <strong>1. By ID:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      myElement = $("#id"); <br><br>
+      <strong>2. By Tag Name:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      myElement = $("p"); <br><br>
+      <strong>3. By Class Name:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      myElement = $(".name"); <br><br>
+      <strong>4. By CSS Selector:</strong> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      myElement = $("p.intro");
+    </td>
+  </tr>
+
+  <tr>
+    <td>Set Text Content</td>
+    <td>myElement.textContent = "Hello";</td>
+    <td>myElement.text("Hello");</td>
+  </tr>
+
+  <tr>
+    <td>Get Text Content</td>
+    <td>myText = document.getElementById("02").textContent;</td>
+    <td>myText = $("#id").text();</td>
+  </tr>
+
+  <tr>
+    <td>Set HTML Content</td>
+    <td>myElement.innerHTML = "<p>Hello World</p>";</td>
+    <td>myElement.html("<p>Hello World</p>");</td>
+  </tr>
+
+  <tr>
+    <td>Get HTML Content</td>
+    <td>content = myElement.innerHTML;</td>
+    <td>content = myElement.html();</td>
+  </tr>
+
+  <tr>
+    <td>Hiding HTML Element</td>
+    <td>myElement.style.display = "none";</td>
+    <td>myElement.hide();</td>
+  </tr>
+
+  <tr>
+    <td>Showing HTML Element</td>
+    <td>myElement.style.display = "";</td>
+    <td>myElement.show();</td>
+  </tr>
+
+  <tr>
+    <td>Styling HTML Element</td>
+    <td>document.getElementById("demo").style.fontSize = "35px";</td>
+    <td>$("#demo").css("font-size","35px");</td>
+  </tr>
+
+   <tr>
+    <td>Removing HTML Content</td>
+    <td>document.getElementById("id02").remove();</td>
+    <td>$("#id02").remove();</td>
+  </tr>
+
+  <tr>
+    <td>Get Parent Element</td>
+    <td>document.getElementById("02").parentNode.nodeName;</td>
+    <td>$("#02").parent().prop("nodeName");</td>
+  </tr>
+</table> 
