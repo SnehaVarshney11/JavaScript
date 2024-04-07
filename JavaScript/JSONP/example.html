@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSONP Example</h2>
+<p id="data"></p>
+
+<script>
+function callbackFunc(data) {
+    // This function will be called when the JSONP response is received
+    document.getElementById("data").innerHTML = "User ID: " + data.userId + "<br>Title: " + data.title;
+}
+</script>
+
+<!-- Make JSONP request to JSONPlaceholder -->
+<script src="https://jsonplaceholder.typicode.com/posts/1?callback=callbackFunc"></script>
+
+</body>
+</html>
