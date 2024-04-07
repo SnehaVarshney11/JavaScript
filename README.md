@@ -1582,8 +1582,8 @@ xhttp.send();
 
   <tr>
     <td>Set HTML Content</td>
-    <td>myElement.innerHTML = "<p>Hello World</p>";</td>
-    <td>myElement.html("<p>Hello World</p>");</td>
+    <td>myElement.innerHTML = "&lt;p&gt;Hello World&lt;/p&gt;";</td>
+    <td>myElement.html("&lt;p&gt;Hello World&lt;/p&gt;");</td>
   </tr>
 
   <tr>
