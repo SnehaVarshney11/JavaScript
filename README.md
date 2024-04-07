@@ -93,19 +93,20 @@ There are three variables: Var, Let, Const
            We can't access variable using var before it's declaration
  <br>
   Example -
-  ```
-  function example() {
-    console.log(x); // Outputs: undefined
-    var x = 5;
-    console.log(x); // Outputs: 5
-  }
 
-  example();
-
-  console.log(y); // Throws ReferenceError: y is not defined
-  let y = 10;
-  console.log(y); // Outputs: 10
-  ```
+    ```
+    function example() {
+      console.log(x); // Outputs: undefined
+      var x = 5;
+      console.log(x); // Outputs: 5
+    }
+  
+    example();
+  
+    console.log(y); // Throws ReferenceError: y is not defined
+    let y = 10;
+    console.log(y); // Outputs: 10
+    ```
 
 # Data Types
 * var x = "Hello"; --> String
