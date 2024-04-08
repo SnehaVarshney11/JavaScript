@@ -344,29 +344,29 @@ ceil(), floor(), round(), trunc(), max(x,y,z...n), min(x,y,z...n), sqrt(), cbrt(
     <th>Map</th>
   </tr>
   <tr>
-    <th>Iterable</th>
-    <th>Not directly iterable</th>
-    <th>Directly iterable</th>
+    <td>Iterable</td>
+    <td>Not directly iterable</td>
+    <td>Directly iterable</td>
   </tr>
   <tr>
-    <th>Size</th>
-    <th>Do not have a size property</th>
-    <th>Have a size property</th>
+    <td>Size</th>
+    <td>Do not have a size property</td>
+    <td>Have a size property</td>
   </tr>
   <tr>
-    <th>Key Types</th>
-    <th>Keys must be Strings (or Symbols)</th>
-    <th>Keys can be any datatype</th>
+    <td>Key Types</td>
+    <td>Keys must be Strings (or Symbols)</td>
+    <td>Keys can be any datatype</td>
   </tr>
   <tr>
-    <th>Key Order</th>
-    <th>Keys are not well ordered</th>
-    <th>Keys are ordered by insertion</th>
+    <td>Key Order</td>
+    <td>Keys are not well ordered</td>
+    <td>Keys are ordered by insertion</td>
   </tr>
   <tr>
-    <th>Defaults</th>
-    <th>Have default keys</th>
-    <th>Do not have default keys</th>
+    <td>Defaults</td>
+    <td>Have default keys</td>
+    <td>Do not have default keys</td>
   </tr>
 </table>
 
