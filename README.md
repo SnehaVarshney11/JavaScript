@@ -126,7 +126,7 @@ There are three variables: Var, Let, Const
 * Conditional Operator: (Condition) ? True Statement : False Statement
 
 # Array Iteration 
-## forEach() -> 
+### forEach() -> 
 The forEach() method calls a function (a callback function) once for each array element. 
 ```
 const numbers = [45, 4, 9, 16, 25];
@@ -138,7 +138,7 @@ function myFunction(value, index, array) {
 }
 ```
 
-## map() ->
+### map() ->
 The map() method creates a new array by performing a function on each array element.
 ```
 const numbers1 = [45, 4, 9, 16, 25];
@@ -149,7 +149,7 @@ function myFunction(value) {
 }
 ```
 
-## filter() ->
+### filter() ->
 The filter() method creates a new array with array elements that pass a test. 
 ```
 const numbers = [45, 4, 9, 16, 25];
@@ -160,7 +160,7 @@ function myFunction(value) {
 }
 ```
 
-## reduce() ->
+### reduce() ->
 It is used to produce a single value output. It works from left to right in array. 
 ```
 const numbers = [45, 4, 9, 16, 25];
@@ -171,10 +171,10 @@ function myFunction(total, value) {
 }
 ```
 
-## reduceRight() -> 
+### reduceRight() -> 
 Same as reduce() method but the difference is; it works from right to left in array. 
 
-## every() ->
+### every() ->
 The every() method checks if all array values pass a test. It produces output as true/ false.
 ```
 const numbers = [45, 4, 9, 16, 25];
@@ -185,17 +185,17 @@ function myFunction(value) {
 }
 ```
 
-## some() ->
+### some() ->
 The some() method checks if some array values pass a test.
 
-## indexOf() & lastIndexOf() ->
+### indexOf() & lastIndexOf() ->
 The indexOf() method searches an array for an element value and returns its position whereas Array.lastIndexOf() returns the position of the last occurrence of the specified element.
 
-## find() & findIndex() ->
+### find() & findIndex() ->
 The find() method returns the value of the first array element that passes a test function. <br>
 The findIndex() method returns the index of the first array element that passes a test function.
 
-## from() ->
+### from() ->
 The Array.from() method returns an Array object from any object with a length property or any iterable object.
 ```
 <script>
@@ -206,7 +206,7 @@ The Array.from() method returns an Array object from any object with a length pr
 O/P :- A,B,C,D,E,F,G
 ```
 
-## keys() ->
+### keys() ->
 The Array.keys() method returns an Array Iterator object with the keys of an array.
 ```
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -219,7 +219,7 @@ for (let x of keys) {
 O/P :- 1 2 3 4 in seperate lines.
 ```
 
-## entries() ->
+### entries() ->
 The entries() method returns an Array Iterator object with key/value pairs :
 ```
 [0, "Banana"]
@@ -260,8 +260,9 @@ The ?? operator returns the first argument if it is not nullish (null or undefin
 let name = null;
 let text = "missing";
 let result = name ?? text;
+console.log(result);
 
-O/P :- The name is missing
+O/P :- missing
 ```
 
 ## The Optional Chaining Operator (?.) :-
@@ -278,7 +279,8 @@ O/P :- Undefined
 * Click (onclick), Double Click (ondblclick), Right Click (oncontextmenu), Mouse Hover (onmouseenter), Mouse Out (onmouseout), Mouse Down (onmousedown), Mouse Up (onmouseup), Key Press (onkeypress), Key Up (onkeyup), Load (onload), Unload (onunload), Resize (onresize), Scroll (onscroll).  
 NOTE: onkeypress works on body tag or inside form tag. 
 
-# While Loop
+# Loops
+### While Loop
 ```
 Initialize Variable
 while(condition){
@@ -286,7 +288,7 @@ while(condition){
   Increment / Decrement 
 }
 ```
-# Do While Loop
+### Do While Loop
 ```
 Initialize Variable
 do{
@@ -294,19 +296,18 @@ do{
   Increment / Decrement 
 }while(condition)
 ```
-# For Loop
+### For Loop
 ```
 for(var initialization; condition; increment/decrement)
 ```
-# for/in Loop
+### for/in Loop
 * Used to print the value of object
 ```
 for(var i in a){
   statement
 }
 ```
-# Data Type
-* String, Number, Boolean, Array, Object, Null, Undefined
+
 # Array Methods
 ```
 sort(), reverse(), pop()--> delete the value of last index, push()--> add the value in last index, shift()--> delete first element, unshift()--> add the value in starting index, concat(), join(), slice(), splice(), isArray(), indexOf(), lastIndexOf(), entries(), every()--> It checks every value of array , filter()--> it creates an aaray filled with all elements that passes a test   , find(), findIndex(), includes(), some()--> it checks if any of the elements in array pass a test , foreach(), toString()--> converts an array into String and returns the result , valueOf()--> returns the array, fill()--> fill all elements in array with static value . 
@@ -334,15 +335,40 @@ number(), parseInt(), parseFloat(), isFinite(), isInteger(), toFixed(x), toPreci
 ceil(), floor(), round(), trunc(), max(x,y,z...n), min(x,y,z...n), sqrt(), cbrt(), pow(x,y), random(), abs(x), PI
 ``` 
 
-# JavaScript Objects vs Maps
-```
-                Object	                                Map
-Iterable	    Not directly iterable	                Directly iterable
-Size	        Do not have a size property	            Have a size property
-Key Types	    Keys must be Strings (or Symbols)	    Keys can be any datatype
-Key Order	    Keys are not well ordered	            Keys are ordered by insertion
-Defaults	    Have default keys	                    Do not have default keys
-```
+## JavaScript Objects vs Maps
+
+<table border="1">
+  <tr>
+    <th>S.No.</th>
+    <th>Object</th>
+    <th>Map</th>
+  </tr>
+  <tr>
+    <th>Iterable</th>
+    <th>Not directly iterable</th>
+    <th>Directly iterable</th>
+  </tr>
+  <tr>
+    <th>Size</th>
+    <th>Do not have a size property</th>
+    <th>Have a size property</th>
+  </tr>
+  <tr>
+    <th>Key Types</th>
+    <th>Keys must be Strings (or Symbols)</th>
+    <th>Keys can be any datatype</th>
+  </tr>
+  <tr>
+    <th>Key Order</th>
+    <th>Keys are not well ordered</th>
+    <th>Keys are ordered by insertion</th>
+  </tr>
+  <tr>
+    <th>Defaults</th>
+    <th>Have default keys</th>
+    <th>Do not have default keys</th>
+  </tr>
+</table>
 
 # Regular Expression :-
 * A regular expression is a sequence of characters that forms a search pattern.
