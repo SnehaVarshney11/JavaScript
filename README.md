@@ -196,10 +196,10 @@ The find() method returns the value of the first array element that passes a tes
 The findIndex() method returns the index of the first array element that passes a test function.
 
 ### from() ->
-The Array.from() method returns an Array object from any object with a length property or any iterable object.
+The Array.from() method returns an Array from any object.
 ```
 <script>
-  const myArr = Array.from("ABCDEFG");
+  const myArr = Array.from("ABCDEFG"); // create an array ['A','B','C','D'....]
   document.getElementById("demo").innerHTML = myArr;
 </script>
 
@@ -216,7 +216,7 @@ for (let x of keys) {
   text += x + "<br>";
 }
 
-O/P :- 1 2 3 4 in seperate lines.
+O/P :- 1 2 3 4 (in seperate lines.)
 ```
 
 ### entries() ->
