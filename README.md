@@ -1182,6 +1182,12 @@ In Bubbling - the inner most element's event is handled first and then outer. Ex
 
 In Capturing - the outer most element's event is handled first and then inner. Example- If there is a &lt;p&gt; inside &lt;div&gt; then &lt;div&gt will click first then &lt;p&gt;
 
+## Event Delegation
+* It is a technique that handle the events efficiently. Instead of adding event listeners to individual child component, we can add just a single event listener to a parent component that manages all the child events. 
+
+### How Event Delegation Works
+When an event is triggered on an element, it first runs the handlers on that element, then on its parent, and so on, up the DOM tree. This process is known as event bubbling. By using event delegation, you can take advantage of this bubbling behavior to handle events for multiple child elements through a single event listener on their common ancestor.
+
 ## Navigation
 * DOM navigation refers to the process of traversing and manipulating the structure of the DOM in HTML documents using JavaScript. 
 * The DOM represents the hierarchical structure of HTML elements on a web page, where each element is a node in the tree-like structure.
@@ -1592,6 +1598,8 @@ xhttp.send();
 * They must have next() method that returns an object with a value and done properties. 
 * The value property represents the next value in the sequence and the done property indicates whether there are more values to be iterated. 
 *The Iterators are commonly used for iterating over data structures like arrays, maps, and sets. 
+
+<b>NOTE-> </b> Generators are functions that can yield multiple values over time and automatically create iterators. Iterators are objects that implement a next() method to produce values one at a time. Generators provide a more convenient and powerful way to create iterators.
 
 <b>How They are different from normal functions- </b>
 * Imagine you’re reading a book, but you only read one page at a time. After finishing a page, you put the book down and come back later to continue from where you left off.
