@@ -1742,3 +1742,4 @@ Generator Function: It’s like reading one page, putting the book down, and pic
 </table> 
 
 <b>Interview Questions</b>
+[Javascript Interview questions .pdf](https://github.com/user-attachments/files/16443771/Javascript.Interview.questions.pdf)
