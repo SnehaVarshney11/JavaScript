@@ -1581,8 +1581,24 @@ xhttp.send();
 * <b> Valid Data Types :- </b> String, Number, Boolean, Object, Array, null.
 * <b> InValid Data Types :- </b> Function, Date, Undefined.
 
-## JSON Parse
+## Generators -> 
+* They are special type of function in js that can be paused and resumed during execution. his is different from normal functions, which run from start to finish without pausing.
+* They are defined by (*) after the function keyword.
+* yield Keyword: Inside a generator function, you use the yield keyword to pause the function and return a value. This "pauses" the function and allows it to be resumed later from where it left off.
+* The Generators are useful for creating iterators, asynchronous code, and handling sequences of data without loading all the data into the memory at once.
 
+## Iterators -> 
+* Iterators are objects with a special structure. 
+* They must have next() method that returns an object with a value and done properties. 
+* The value property represents the next value in the sequence and the done property indicates whether there are more values to be iterated. 
+*The Iterators are commonly used for iterating over data structures like arrays, maps, and sets. 
+
+<b>How They are different from normal functions- </b>
+* Imagine you’re reading a book, but you only read one page at a time. After finishing a page, you put the book down and come back later to continue from where you left off.
+Normal Function: It’s like reading the entire book in one go. You start at the beginning and finish at the end without stopping. <br>
+Generator Function: It’s like reading one page, putting the book down, and picking it up later to continue reading from the same page.
+
+## JSON Parse
 * Date Objects are not allowed in JSON. If we need to include a date, write it as String. 
   ```
   const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
