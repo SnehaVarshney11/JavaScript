@@ -1526,6 +1526,46 @@ xhttp.send();
   </tr>
 </table>
 
+### <b>NOTE -></b> Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+
+# Closures
+* JS variables can belong to local and global scope. Global varibles can be made local (private) with closures. 
+* Closure is a function that has access to variables in its parent scope, even after the parent function has returned.
+* Clousres are created when a function is defined inside another function. 
+* <b>Example -> Closure Function </b>
+  ```
+  function outerFunction(x) {
+    var innerval = 3;
+    function innerFunction() { // Closure Function 
+      return x + innerval;
+    }
+    return innerFunction;
+  }
+
+  var closure = outerFunction(2);
+  Output -> 5 
+  ```
+* <b>Example -> Without Closure Function </b>
+  ```
+  function outerFunction(x) {
+    var innerval = 3;
+    
+    function innerFunction(a, b) {
+        return a + b; // Does not use variables from outer function, no closure
+    }
+    
+    return innerFunction(x, innerval);
+  }
+
+  var result = outerFunction(2);
+  console.log(result); // Output: 5
+
+  ```
+<b> USES-> </b>
+1. Data Privacy -> Closures allow you to create private variables that are not accessible from outside the function scope.
+2. Function Factories -> Closures can be used to create functions with preset parameters.
+3. Maintaining State in Asynchronus Code -> Closures help maintain state in asynchronous operations like event handlers or timers.
+
 # JS JSON
 * JSON stands for JavaScript Object Notation. JSON is a text format for storing and transporting data.
 * Common use of JSON is to exchange the data to/from a web server.
