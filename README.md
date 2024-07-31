@@ -578,8 +578,14 @@ functionName(); <-- Calling a function
 ```
 * Gobal Variable --> It works inside function or outside the function.
 * Local Variable --> It works only inside the function.
-# Function hoisting
-* The function hoisting is a mechanism that the JavaScript engine physically moves function declarations to the top of the code before executing them.
+
+## Hoisting 
+Hoisting is a machanism, where varibles and function declarations are moved at the top of their scope during compiling phase. It means, we can use function and variables before it's declaration. 
+
+Variable hoisting with var: Declarations are hoisted, but initializations are not. <br>
+Variable hoisting with let and const: Declarations are hoisted, but variables are not initialized and are in a "temporal dead zone." <br>
+Function hoisting with function declarations: Both the declaration and definition are hoisted. <br>
+Function hoisting with function expressions: Neither the declaration nor the initialization is hoisted.
 
 ## Self-Invoking Functions :-
 Function expressions will execute automatically if the expression is followed by ().
