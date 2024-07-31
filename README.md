@@ -1740,3 +1740,5 @@ Generator Function: It’s like reading one page, putting the book down, and pic
     <td>$("#02").parent().prop("nodeName");</td>
   </tr>
 </table> 
+
+<b>Interview Questions</b>
